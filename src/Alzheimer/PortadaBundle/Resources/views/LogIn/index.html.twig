@@ -1,0 +1,11 @@
+{% extends '::frontend.html.twig' %}
+
+{% block body %}
+<div class="row">
+  	<ul class="button-group round even-3">
+	  <li><a href="{{ path('nivel_index') }}" class="button alert">Niveles</a></li>
+	  <li><a href="{{ path('usuario_index') }}" class="button">Usuarios</a></li>
+	  <li><a href="{{ path('grupo_index') }}" class="button alert">Grupos</a></li>
+	</ul>
+</div>
+{% endblock %}

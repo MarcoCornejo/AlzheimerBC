@@ -1,0 +1,48 @@
+nivel_homepage:
+    pattern:  /
+    defaults: { _controller: NivelBundle:Default:index }
+
+nivel_index:
+    pattern:  /index
+    defaults: { _controller: NivelBundle:Nivel:index }
+
+_nivel_index:
+    pattern:  /index/
+    defaults: { _controller: NivelBundle:Nivel:index }
+
+nivel_new:
+    pattern:  /new
+    defaults: { _controller: NivelBundle:Nivel:new }
+
+_nivel_new:
+    pattern:  /new/
+    defaults: { _controller: NivelBundle:Nivel:new }
+
+nivel_delete:
+    pattern:  /delete/{id}
+    defaults: { _controller: NivelBundle:Nivel:delete }
+
+_nivel_delete:
+    pattern:  /delete/{id}/
+    defaults: { _controller: NivelBundle:Nivel:delete }
+
+nivel_edit:
+    pattern:  /edit/{id}
+    defaults: { _controller: NivelBundle:Nivel:edit }
+
+_nivel_edit:
+    pattern:  /edit/{id}/
+    defaults: { _controller: NivelBundle:Nivel:edit }
+
+nivel_show:
+    pattern:  /show/{id}
+    defaults: { _controller: NivelBundle:Nivel:show }
+
+_nivel_edit:
+    pattern:  /show/{id}/
+    defaults: { _controller: NivelBundle:Nivel:show }
+
+nivel_create:
+    defaults: { _controller: NivelBundle:Nivel:create }
+
+

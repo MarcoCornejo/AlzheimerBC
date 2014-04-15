@@ -1,0 +1,10 @@
+usuario:
+    pattern:  /
+    defaults: { _controller: "UsuarioBundle:Usuario:index" }
+
+usuario_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "UsuarioBundle:Usuario:show" }
+
+
+

@@ -1,0 +1,17 @@
+usuario:
+    resource: "@UsuarioBundle/Resources/config/routing.yml"
+    prefix:   /
+
+
+portada:
+    resource: "@PortadaBundle/Resources/config/routing.yml"
+    prefix:   /
+
+grupo:
+    resource: "@GrupoBundle/Resources/config/routing.yml"
+    prefix:   /
+
+nivel:
+    resource: "@NivelBundle/Resources/config/routing.yml"
+    prefix:   /
+

@@ -1,0 +1,164 @@
+homepage:
+    pattern:  /
+    defaults: { _controller: PortadaBundle:Index:index }
+# *********************************************************************
+
+quienes_somos:
+    pattern:  /quienes_somos
+    defaults: { _controller: PortadaBundle:Pages:quienes }
+
+
+
+
+
+# *********************************************************************
+log_page:
+    pattern:  /login
+    defaults: { _controller: PortadaBundle:Log:index }
+
+# *********************************************************************
+usuario_index:
+    pattern:  /usuario
+    defaults: { _controller: UsuarioBundle:Usuario:index }
+
+_usuario_index:
+    pattern:  /usuario/
+    defaults: { _controller: UsuarioBundle:Usuario:index }
+
+usuario_new:
+    pattern:  /usuario/new
+    defaults: { _controller: UsuarioBundle:Usuario:new }
+
+_usuario_new:
+    pattern:  /usuario/new/
+    defaults: { _controller: UsuarioBundle:Usuario:new }
+
+usuario_delete:
+    pattern:  /usuario/delete/{id}
+    defaults: { _controller: UsuarioBundle:Usuario:delete }
+
+_usuario_delete:
+    pattern:  /usuario/delete/{id}/
+    defaults: { _controller: UsuarioBundle:Usuario:delete }
+
+usuario_edit:
+    pattern:  /usuario/edit/{id}
+    defaults: { _controller: UsuarioBundle:Usuario:edit }
+
+_usuario_edit:
+    pattern:  /usuario/edit/{id}/
+    defaults: { _controller: UsuarioBundle:Usuario:edit }
+
+usuario_show:
+    pattern:  /usuario/show/{id}
+    defaults: { _controller: UsuarioBundle:Usuario:show }
+
+_usuario_edit:
+    pattern:  /usuario/show/{id}/
+    defaults: { _controller: UsuarioBundle:Usuario:show }
+
+usuario_create:
+    pattern:  /usuario/create
+    defaults: { _controller: UsuarioBundle:Usuario:create }
+
+usuario_update:
+    pattern:  /usuario/update/{id}
+    defaults: { _controller: UsuarioBundle:Usuario:update }
+
+# *********************************************************************
+nivel_index:
+    pattern:  /nivel
+    defaults: { _controller: NivelBundle:Nivel:index }
+
+_nivel_index:
+    pattern:  /nivel/
+    defaults: { _controller: NivelBundle:Nivel:index }
+
+nivel_new:
+    pattern:  /nivel/new
+    defaults: { _controller: NivelBundle:Nivel:new }
+
+_nivel_new:
+    pattern:  /nivel/new/
+    defaults: { _controller: NivelBundle:Nivel:new }
+
+nivel_delete:
+    pattern:  /nivel/delete/{id}
+    defaults: { _controller: NivelBundle:Nivel:delete }
+
+_nivel_delete:
+    pattern:  /nivel/delete/{id}/
+    defaults: { _controller: NivelBundle:Nivel:delete }
+
+nivel_edit:
+    pattern:  /nivel/edit/{id}
+    defaults: { _controller: NivelBundle:Nivel:edit }
+
+_nivel_edit:
+    pattern:  /nivel/edit/{id}/
+    defaults: { _controller: NivelBundle:Nivel:edit }
+
+nivel_show:
+    pattern:  /nivel/show/{id}
+    defaults: { _controller: NivelBundle:Nivel:show }
+
+_nivel_edit:
+    pattern:  /nivel/show/{id}/
+    defaults: { _controller: NivelBundle:Nivel:show }
+
+nivel_create:
+    pattern:  /nivel/create
+    defaults: { _controller: NivelBundle:Nivel:create }
+
+nivel_update:
+    pattern:  /nivel/update/{id}
+    defaults: { _controller: NivelBundle:Nivel:update }
+
+# *********************************************************************
+grupo_index:
+    pattern:  /grupo
+    defaults: { _controller: GrupoBundle:Grupo:index }
+
+_grupo_index:
+    pattern:  /grupo/
+    defaults: { _controller: GrupoBundle:Grupo:index }
+
+grupo_new:
+    pattern:  /grupo/new
+    defaults: { _controller: GrupoBundle:Grupo:new }
+
+_grupo_new:
+    pattern:  /grupo/new/
+    defaults: { _controller: GrupoBundle:Grupo:new }
+
+grupo_delete:
+    pattern:  /grupo/delete/{id}
+    defaults: { _controller: GrupoBundle:Grupo:delete }
+
+_grupo_delete:
+    pattern:  /grupo/delete/{id}/
+    defaults: { _controller: GrupoBundle:Grupo:delete }
+
+grupo_edit:
+    pattern:  /grupo/edit/{id}
+    defaults: { _controller: GrupoBundle:Grupo:edit }
+
+_grupo_edit:
+    pattern:  /grupo/edit/{id}/
+    defaults: { _controller: GrupoBundle:Grupo:edit }
+
+grupo_show:
+    pattern:  /grupo/show/{id}
+    defaults: { _controller: GrupoBundle:Grupo:show }
+
+_grupo_edit:
+    pattern:  /grupo/show/{id}/
+    defaults: { _controller: GrupoBundle:Grupo:show }
+
+grupo_create:
+    pattern:  /grupo/create
+    defaults: { _controller: GrupoBundle:Grupo:create }
+
+grupo_update:
+    pattern:  /grupo/update/{id}
+    defaults: { _controller: GrupoBundle:Grupo:update }

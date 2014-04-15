@@ -1,0 +1,19 @@
+{% extends '::frontend.html.twig' %}
+
+{% block body -%}
+
+<div class="row">
+	<div class="large-12 columns">
+		<h1>Usuario creation</h1>
+		{{ form(form) }}
+		<ul class="record_actions">
+			<li>
+				<a href="{{ path('usuario_index') }}">
+					Back to the list
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+
+{% endblock %}
