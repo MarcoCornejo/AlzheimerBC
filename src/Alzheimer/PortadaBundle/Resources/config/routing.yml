@@ -57,10 +57,6 @@ _usuario_edit:
     pattern:  /usuario/show/{id}/
     defaults: { _controller: UsuarioBundle:Usuario:show }
 
-usuario_create:
-    pattern:  /usuario/create
-    defaults: { _controller: UsuarioBundle:Usuario:create }
-
 usuario_update:
     pattern:  /usuario/update/{id}
     defaults: { _controller: UsuarioBundle:Usuario:update }
