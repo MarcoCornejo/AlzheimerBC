@@ -56,7 +56,7 @@ class UsuarioController extends Controller
             $em->persist($entity);
             $em->flush();
 
-            return $this->redirect($this->generateUrl('usuario_index'));
+            return $this->redirect($this->generateUrl('usuario_show', array('id' => $entity->getId())));
         }
 
         return array('entity' => $entity, 'form' => $form->createView());
