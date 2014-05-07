@@ -76,15 +76,6 @@ class Usuario
     private $contacto;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="foto", type="string", length=50)
-     */
-    private $foto;
-
-    
-
-    /**
      * Get id
      *
      * @return integer 
@@ -231,30 +222,6 @@ class Usuario
     {
         return $this->contacto;
     }
-
-    /**
-     * Set foto
-     *
-     * @param string $Foto
-     * @return Usuarios
-     */
-        public function setFoto($foto)
-        {
-            $this->foto = $foto;
-
-            return $this;
-        }
-
-    /**
-     * Get foto
-     *
-     * @return string 
-     */
-    public function getFoto()
-    {
-        return $this->foto;
-    }    
-
 
     /**
      * Set nivel_ID
