@@ -3,6 +3,8 @@
 namespace Alzheimer\UsuarioBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 /**
  * Usuario
@@ -74,6 +76,17 @@ class Usuario
      * @ORM\Column(name="contacto", type="text")
      */
     private $contacto;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    protected $rutaFoto;
+
+    /**
+     *
+     * @Assert\Image(maxSize = "500k", maxWidth = 300, maxHeight = 300)
+     */
+    protected $foto;
 
     /**
      * Get id
@@ -263,6 +276,65 @@ class Usuario
     public function getGrupoID()
     {
         return $this->grupo_ID;
+    }
+
+        /**
+     * Set rutaFoto
+     *
+     * @param string $foto
+     */
+    public function setRutaFoto($rutaFoto)
+    {
+        $this->rutaFoto = $rutaFoto;
+    }
+
+    /**
+     * Get rutaFoto
+     *
+     * @return string
+     */
+    public function getRutaFoto()
+    {
+        return $this->rutaFoto;
+    }
+
+    /**
+     * Set foto.
+     *
+     * @param UploadedFile $foto
+     */
+    public function setFoto(UploadedFile $foto = null)
+    {
+        $this->foto = $foto;
+    }
+
+    /**
+     * Get foto.
+     *
+     * @return UploadedFile
+     */
+    public function getFoto()
+    {
+        return $this->foto;
+    }
+
+    /**
+     * Sube la foto de la oferta copiándola en el directorio que se indica y
+     * guardando en la entidad la ruta hasta la foto
+     *
+     * @param string $directorioDestino Ruta completa del directorio al que se sube la foto
+     */
+    public function subirFoto($directorioDestino)
+    {
+        if (null === $this->getFoto()) {
+            return;
+        }
+
+        $nombreArchivoFoto = $this->getFoto()->getClientOriginalName();
+
+        $this->getFoto()->move($directorioDestino, $nombreArchivoFoto);
+
+        $this->setRutaFoto($nombreArchivoFoto);
     }
 
     public function __toString()
