@@ -23,6 +23,7 @@ class UsuarioType extends AbstractType
             ->add('contacto')            
             ->add('nivel_ID')
             ->add('grupo_ID')
+            ->add('foto', 'file', array('required' => false))
             ->add('guardar', 'submit')
         ;
     }
