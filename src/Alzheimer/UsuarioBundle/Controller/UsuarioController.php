@@ -51,6 +51,7 @@ class UsuarioController extends Controller
         $form->handleRequest($this->getRequest());
 
         if ($form->isValid()) {
+            $entity->subirFoto($this->container->getParameter('usuarios.imagenes'));
             $em = $this->getDoctrine()->getManager();
             $em->persist($entity);
             $em->flush();
