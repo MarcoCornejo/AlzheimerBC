@@ -64,3 +64,6 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+
+parameters:
+    usuarios.imagenes: %kernel.root_dir%/../web/uploads/images/usuarios

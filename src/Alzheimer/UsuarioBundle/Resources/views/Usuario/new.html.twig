@@ -5,7 +5,30 @@
 <div class="row">
 	<div class="large-12 columns">
 		<h1>Usuario creation</h1>
-		{{ form(form) }}
+		<fieldset>
+            <legend>Usuario</legend>
+            {{ form_start(form, { 'action': path('usuario_new'), 'method': 'POST' }) }} 
+                {{ form_label(form.username, 'Username') }}
+                {{ form_widget(form.username) }}
+                {{ form_label(form.nombre, 'Nombre') }}
+                {{ form_widget(form.nombre) }}
+                {{ form_label(form.a_paterno, 'Apellido Paterno') }}
+                {{ form_widget(form.a_paterno) }}
+                {{ form_label(form.a_materno, 'Apellido Materno') }}
+                {{ form_widget(form.a_materno) }}
+                {{ form_label(form.correo, 'Correo electrónico') }}
+                {{ form_widget(form.correo) }}
+                {{ form_label(form.foto, 'Foto') }}
+                {{ form_widget(form.foto) }}
+                {{ form_errors(form.foto) }}
+                {{ form_label(form.contacto, 'Contacto') }}
+                {{ form_widget(form.contacto) }}
+                {{ form_label(form.nivel_ID, 'Nivel') }}
+                {{ form_widget(form.nivel_ID) }}
+                {{ form_label(form.grupo_ID, 'Grupo') }}
+                {{ form_widget(form.grupo_ID) }}
+            {{ form_end(form) }}
+        </fieldset>
 		<ul class="record_actions">
 			<li>
 				<a href="{{ path('usuario_index') }}">

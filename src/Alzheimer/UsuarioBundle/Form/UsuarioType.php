@@ -20,10 +20,11 @@ class UsuarioType extends AbstractType
             ->add('a_paterno')
             ->add('a_materno')
             ->add('correo')
-            ->add('foto')
             ->add('contacto')            
             ->add('nivel_ID')
             ->add('grupo_ID')
+            ->add('foto', 'file', array('required' => false))
+            ->add('guardar', 'submit')
         ;
     }
     
