@@ -1,0 +1,20 @@
+{% extends '::frontend.html.twig' %}
+
+{% block body %}
+<div class="row">
+  <div class="medium-1 columns"><b>Direcci&oacute;n:</b></div>
+  <div class="medium-11 columns"><p>CASA DEL ABUELO.<br> Mision de san diego 3498. Hacienda Dorada</p></div> 
+</div>
+
+<div class="row">
+  <div class="medium-1 columns"><b>Telefono:</b></div>
+  <div class="medium-11 columns"><p>552 48 46</p></div> 
+</div>
+
+<div class="row">
+  <div class="medium-1 columns"></div>
+  <div class="medium-11 columns"><iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com.mx/maps/myplaces?hl=es&amp;ctz=420&amp;ie=UTF8&amp;ll=32.61393,-115.449142&amp;spn=0.172934,0.338173&amp;t=m&amp;z=12"></iframe><br /><small><a href="https://maps.google.com.mx/maps/myplaces?hl=es&amp;ctz=420&amp;ie=UTF8&amp;ll=32.61393,-115.449142&amp;spn=0.172934,0.338173&amp;t=m&amp;z=12&amp;source=embed" style="color:#0000FF;text-align:left">Ver mapa más grande</a></small>  </div>
+</div></div> 
+</div>
+{% endblock %}
+

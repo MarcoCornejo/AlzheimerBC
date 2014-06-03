@@ -67,3 +67,4 @@ swiftmailer:
 
 parameters:
     usuarios.imagenes: %kernel.root_dir%/../web/uploads/images/usuarios
+    noticias.imagenes: %kernel.root_dir%/../web/uploads/images/noticias

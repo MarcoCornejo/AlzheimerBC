@@ -1,0 +1,44 @@
+{% extends '::frontend.html.twig' %}
+
+{% block body %}
+
+<div class="row">
+<hr />  
+  <div class="small-10 columns">
+  <h1 class="title" style="color:#009966;">Factores de Riesgo</h1>
+  
+  <p>
+  Los científicos han identificado los factores que aumentan el riesgo de enfermedad de Alzheimer. Eston son:</p>
+
+  <li>la edad</li>
+  <li>la historia familiar</li>
+  <li>herencia</li><br />
+
+  <p>
+    Sin embargo se ha encontrado que existen otros factores que podemos controlar como son  el estilo de vida, la salud y el manejo correcto de afecciones que pudiera tener.<br />
+
+Trate de:
+  </p>
+  	<li>mantener su peso dentro de las pautas recomendadas</li>
+  	<li>evite consumir alcohol en exceso</li>
+  	<li>manténgase socialmente conectado</li>
+  	<li>ejercite el cuerpo y la mente</li><br />
+
+	<p>
+	El riesgo de desarrollar la enfermedad de Alzheimer o demencia vascular parece aumentar por muchas afecciones que dañan el corazón o los vasos sanguíneos. Trate de controlar:
+	</p>
+
+	<li>la presión arterial alta</li>
+	<li>enfermedades del corazón</li>
+	<li>derrame cerebral</li>
+	<li>diabetes</li>
+	<li>colesterol alto</li><br />
+
+  </div>
+   <hr />
+</div>  
+  
+ 
+
+</div>
+{% endblock%}

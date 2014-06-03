@@ -7,14 +7,95 @@ quienes_somos:
     pattern:  /quienes_somos
     defaults: { _controller: PortadaBundle:Pages:quienes }
 
+demencia:
+    pattern:  /demencia
+    defaults: { _controller: PortadaBundle:Pages:demencia }
+
+alzheimer:
+    pattern:  /alzheimer
+    defaults: { _controller: PortadaBundle:Pages:alzheimer }
+
+factores:
+    pattern:  /factores
+    defaults: { _controller: PortadaBundle:Pages:factores }
+
+acudir:
+    pattern:  /acudir
+    defaults: { _controller: PortadaBundle:Pages:acudir }
+
+tratamientos:
+    pattern:  /tratamientos
+    defaults: { _controller: PortadaBundle:Pages:tratamientos }
+
+detectando_senales:
+    pattern:  /detectando_senales
+    defaults: { _controller: PortadaBundle:Pages:detectando }
+
+preguntas:
+    pattern:  /preguntas
+    defaults: { _controller: PortadaBundle:Pages:preguntas }
+
+diagnostico:
+    pattern:  /diagnostico
+    defaults: { _controller: PortadaBundle:Pages:diagnostico }
+
+edad_temprana:
+    pattern:  /edad_temprana
+    defaults: { _controller: PortadaBundle:Pages:edad }
+
+ninos_jovenes:
+    pattern:  /ninos_jovenes
+    defaults: { _controller: PortadaBundle:Pages:ninos }
+
+legales:
+    pattern:  /legales
+    defaults: { _controller: PortadaBundle:Pages:legales }
+
+seguridad:
+    pattern:  /seguridad
+    defaults: { _controller: PortadaBundle:Pages:seguridad }
 
 
+vida_diaria:
+    pattern:  /vida_diaria
+    defaults: { _controller: PortadaBundle:Pages:vida }
+
+
+etapas:
+    pattern:  /etapas
+    defaults: { _controller: PortadaBundle:Pages:etapas }
+
+opciones:
+    pattern:  /opciones
+    defaults: { _controller: PortadaBundle:Pages:opciones }
+
+grupos:
+    pattern:  /grupos
+    defaults: { _controller: PortadaBundle:Pages:grupos }
+
+contacto:
+    pattern:  /contacto
+    defaults: { _controller: PortadaBundle:Pages:contacto }
 
 
 # *********************************************************************
-log_page:
-    pattern:  /login
-    defaults: { _controller: PortadaBundle:Log:index }
+#log_page:
+#    pattern:  /login
+#    defaults: { _controller: PortadaBundle:Login:index }
+
+login:
+    pattern: /admin/login
+    defaults: { _controller: UserBundle:Security:login }
+ 
+login_check:
+    pattern: admin/login_check
+ 
+logout:
+    pattern: /logout
+
+
+# *********************************************************************
+
 
 # *********************************************************************
 usuario_index:
@@ -158,3 +239,59 @@ grupo_create:
 grupo_update:
     pattern:  /grupo/update/{id}
     defaults: { _controller: GrupoBundle:Grupo:update }
+
+#*********************noticias***********************
+
+noticias_index:
+    pattern:  /noticias
+    defaults: { _controller: NoticiasBundle:Noticias:index }
+
+_noticias_index:
+    pattern:  /noticias/
+    defaults: { _controller: NoticiasBundle:Noticias:index }
+
+noticias_new:
+    pattern:  /noticias/new
+    defaults: { _controller: NoticiasBundle:Noticias:new }
+
+_noticias_new:
+    pattern:  /noticias/new/
+    defaults: { _controller: NoticiasBundle:Noticias:new }
+
+noticias_delete:
+    pattern:  /noticias/delete/{id}
+    defaults: { _controller: NoticiasBundle:Noticias:delete }
+
+_noticias_delete:
+    pattern:  /noticias/delete/{id}/
+    defaults: { _controller: NoticiasBundle:Noticias:delete }
+
+noticias_edit:
+    pattern:  /noticias/edit/{id}
+    defaults: { _controller: NoticiasBundle:Noticias:edit }
+
+_noticias_edit:
+    pattern:  /noticias/edit/{id}/
+    defaults: { _controller: NoticiasBundle:Noticias:edit }
+
+noticias_show:
+    pattern:  /noticias/show/{id}
+    defaults: { _controller: NoticiasBundle:Noticias:show }
+
+_noticias_edit:
+    pattern:  /noticias/show/{id}/
+    defaults: { _controller: NoticiasBundle:Noticias:show }
+
+noticias_create:
+    pattern:  /noticias/create
+    defaults: { _controller: NoticiasBundle:Noticias:create }
+
+noticias_update:
+    pattern:  /noticias/update/{id}
+    defaults: { _controller: NoticiasBundle:Noticias:update }
+
+noticias_publicas:
+    pattern:  /noticias_publicas
+    defaults: { _controller: NoticiasBundle:NoticiasPublicas:index }
+
+

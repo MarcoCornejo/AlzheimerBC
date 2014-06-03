@@ -1,0 +1,44 @@
+{% extends '::frontend.html.twig' %}
+
+{% block body -%}
+<div class="row">
+    <div class="large-12 columns">
+        <h1>Lista de Grupos</h1>
+        <table class="records_list">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Descripcion</th>
+                    <th>Actiones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for entity in entities %}
+                <tr>
+                    <td><a href="{{ path('grupo_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                    <td>{{ entity.Descripcion }}</td>
+                    <td>
+                        <ul>
+                            
+                                <a href="{{ path('grupo_show', { 'id': entity.id }) }}">Mostrar</a><br>
+                            
+                            
+                                <a href="{{ path('grupo_edit', { 'id': entity.id }) }}">Editar</a>
+                            
+                        </ul>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <ul>
+           
+                <a href="{{ path('grupo_new') }}">
+                    Crear Nuevo Grupo
+                </a>
+            
+        </ul>
+    </div>
+</div>
+<br><br><br><br>
+{% endblock %}

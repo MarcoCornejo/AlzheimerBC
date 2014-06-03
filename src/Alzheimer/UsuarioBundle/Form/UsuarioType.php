@@ -20,6 +20,7 @@ class UsuarioType extends AbstractType
             ->add('a_paterno')
             ->add('a_materno')
             ->add('correo')
+	    ->add('password', 'password')
             ->add('contacto')            
             ->add('nivel_ID')
             ->add('grupo_ID')

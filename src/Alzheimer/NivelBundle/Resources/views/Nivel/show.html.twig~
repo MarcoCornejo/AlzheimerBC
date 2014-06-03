@@ -1,0 +1,36 @@
+{% extends '::frontend.html.twig' %}
+
+{% block body -%}
+<div class="row">
+    <div class="large-8 columns">
+
+        <h1>Nivel</h1>
+
+        <table class="record_properties">
+            <tbody>
+                <tr>
+                    <th>Id</th>
+                    <td>{{ entity.id }}</td>
+                </tr>
+                <tr>
+                    <th>Descripcion</th>
+                    <td>{{ entity.Descripcion }}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <ul class="record_actions">
+            
+                <a href="{{ path('nivel_index') }}">
+                    Regresar
+                </a><br>
+            
+                <a href="{{ path('nivel_edit', { 'id': entity.id }) }}">
+                    Editar
+                </a><br>
+            
+            {{ form(delete_form) }}
+        </ul>
+    </div>
+</div>
+{% endblock %}

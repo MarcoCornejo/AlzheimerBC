@@ -1,0 +1,43 @@
+{% extends '::frontend.html.twig' %}
+
+{% block body %}
+
+<div class="row">
+<hr />  
+  <div class="small-10 columns">
+   <h1 class="title" style="color:#009966;">Etapas y Comportamiento</h1>
+   <p>
+   		La enfermedad del Alzheimer pasa por diferentes fases o etapas, caracterizadas por su continuo y progresivo empeoramiento. Podremos distinguir tres etapas:
+   </p>
+
+   	<img src="{{ asset('bundles/portada/img/Picture1.jpg') }}" alt="etapas del Alzheimer"/><br><br>
+  		
+  	<p>
+  		<b>Etapa Inicial o Fase 1:</b><br>
+		Esta primera etapa se caracteriza por tener algunas pérdidas de memoria: ocasionalmente se le olvidan algunas cosas, pueden perderse, olvidar sus citas o nombres de personas. Estas pérdidas de memoria pueden pasar inadvertidas por ser bastante leves pero con el tiempo pueden interferir en el día a día de la persona. En cuanto al comportamiento destacamos cambios de humor e incluso enfados del enfermo cuando se dan cuenta que pierden el control de lo que les rodeas. En esta fase realizan frases más cortas, mezclan ideas sin relación directa, tienen problemas para encontrar palabras, aunque continúan razonando adecuadamente.
+  	</p>
+
+  	<p>
+  		<b>Etapa Intermedia o Fase 2:</b><br>
+		En esta fase se agrava la situación y ya no hay duda de su diagnóstico. Disminuye la memoria reciente y empiezan a producirse cambios de comportamiento más acusados: agresividad, miedos, alucinaciones, El paciente pasa a ser más dependiente, necesitando ayuda para el autocuidado, es incapaz de trabajar y se muestra confuso con facilidad, necesitando una supervisión diaria de todo lo que hace. Es cierto, que en esta etapa las rutinas o conversaciones superficiales pueden verse conservadas pero cuando se profundiza empiezan a aparecer dificultades. El lenguaje empieza a verse más afectado: repite frases, no las acaba, le cuesta relacionar y diferenciar conceptos. Sus movimientos al contrario que en la etapa uno donde siguen estando bien, en la fase 2 empiezan a perder el equilibrio, tienen caídas espontáneas y necesitan ayuda para deambular. 
+  	</p>
+
+  	<p>
+  		<b>Etapa Avanzada o Fase 3:</b><br>
+  		En la última fase, el paciente depende por completo de terceras personas para su subsistencia. Necesita ayuda incluso para las tareas más básicas: comer, limpiarse, moverse. La memoria empieza a perderse tanto la reciente como la remota. No reconocen a sus hijos, cónyuges, etc...Su comportamiento es como el de un niño pequeño: llora, grita, se agita, no comprende una explicación y pueden tener periodos y comportamientos desinhibidos y agresivos. En cuanto al lenguaje balbucean. Muchos pacientes permanecen rígidos y mudos. Les cuesta controlar sus esfínteres, se atragantan, le cuesta tragar y no controlan sus gestos. Aumentan las complicaciones y riesgos derivados de infecciones, deshidratación, desnutrición, heridas por inmovilización, etc... En ocasiones, la causa final de la muerte suele estar relacionada con alguna de estas complicaciones. 
+  	</p>
+
+  	<p>
+  		Como podemos ver la enfermedad del Alzheimer pasa por una evolución lenta y progresiva con ligeros problemas en la primera etapa y acabando con graves daños cerebrales en las últimas fases. 
+  	</p>
+
+  	<p>
+  		<b>El tiempo de vida</b> de una persona con Alzheimer varía de una a otra, como media suelen vivir entre 8-10 años tras el diagnóstico, aunque hay ocasiones donde los pacientes pueden sobrevivir hasta 20 años. Aún siguen sin conocerse los motivos de por qué existen esas diferencias en la esperanza de vida de los enfermos de Alzheimer.
+  	</p>
+   
+  </div>
+  <hr />
+</div>   
+
+</div>
+{% endblock%}

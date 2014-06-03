@@ -1,0 +1,51 @@
+{% extends '::frontend.html.twig' %}
+
+{% block body %}
+
+<div class="row">
+<hr />  
+  <div class="small-10 columns">
+  <h1 class="title" style="color:#009966;">Opciones de Cuidado</h1>
+
+  <p>
+  	Las siguientes intervenciones psico-sociales pueden ayudar a usted y a su familia a enfrentar mejor la situación y ayudar a la persona con la enfermedad de Alzheimer:<br></p>
+
+  	
+  <p>
+  	<b>Grupos de apoyo.</b> Los grupos de apoyo ofrecen a los miembros de la familia y a los cuidadores del paciente un lugar seguro para compartir sentimientos, obtener apoyo emocional y moral, aprender información práctica y hablar con gente que puede entender sus frustraciones. Los grupos de apoyo están ampliamente disponibles para la familia y los cuidadores de pacientes con la enfermedad de Alzheimer, a través de filiales locales de la Asociación de Alzheimer, hospitales, organizaciones de servicios para personas mayores y grupos religiosos.</p>
+
+  <p>
+  	Diversas investigaciones han mostrado que es de gran ayuda la combinación de la participación en grupos de apoyo, asesoramiento psicológico individual y familiar, y cuando es necesario consultas por parte de las personas primariamente a cargo del paciente. Un estudio mostró que la internación del paciente en un hogar de atención (nursing home) fue demorado cerca de un año como resultado de intervenciones psico-sociales y las personas a cargo del paciente reportaron menos enfermedades y depresión, y un mayor sentido de apoyo familiar.</p>
+
+   <p>
+  	<b>Servicios de descanso.</b> Los servicios de descanso pueden proveerle un período programado de alivio en las responsabilidades que demanda el cuidado de una persona con demencia. Por períodos que van de pocas horas a pocas semanas, otras personas pueden atender las necesidades del paciente, dejándolo a usted libre para manejar otras responsabilidades, o simplemente para recuperarse y experimentar un poco de descanso y relajación. Según algunos estudios usar servicios de descanso facilita que algunos pacientes continúen recibiendo cuidado en la casa por un período más largo, antes de ser puestos en un hogar de atención. Los servicios de descanso son provistos por acompañantes para el paciente, ayuda de salud en la casa, visitas de enfermeras a domicilio, servicios de atención durante el día para adultos y hogares de atención. El descanso puede también ser provisto a través del uso de video grabaciones que usan actores profesionales para simular interacción con el paciente o videos con escenas diversas que muestran material de interés al paciente. </p>
+
+
+  <p>
+  	<b>Entrenamiento.</b> Cuidar un paciente con la enfermedad de Alzheimer en la casa requiere habilidades especiales que pueden ser nuevas para usted. Existen programas de entrenamiento en la comunidad, tales como aquellos provistos por la Asociación de Alzheimer, que ayuda a las personas a cargo del paciente a manejar a éste en la casa. La manera en la cual usted se comunica con el individuo con la enfermedad de Alzheimer cambiará a medida que la enfermedad avanza, por lo cual es esencial desarrollar habilidades de comunicación para minimizar conductas no deseadas. La educación acerca de la enfermedad puede ayudar a usted y a su familia a desarrollar estas habilidades y a minimizar la frustración en la medida en que sepan que esperar.</p>
+
+
+  <p>
+  	<b>Intervenciones familiares en el caso de pacientes con cuidados prolongados.</b> Si es necesario poner al miembro de su familia en un hogar de atención (nursing home), el asesoramiento psicológico puede ayudar a usted y a su familia a manejar los sentimientos de culpa, pena, enojo, depresión y ansiedad. Si es necesario el apoyo puede ser obtenido a través de asesoramiento psicológico familiar y grupal, grupos de apoyo y terapia individual. Su médico puede ayudarlo a evaluar las opciones. El cuidado de largo plazo debe ser discutido mucho antes de que éste sea necesario.</p>
+
+  <p>
+	<b>Tratamientos Dirigidos al Paciente.</b> Una persona con la enfermedad de Alzheimer puede mostrar conductas difíciles, tales como cambios severos de humor, agresión verbal o física, ira, repetición de palabras y pérdida de discernimiento. Esfuerzos para mantener o mejorar la conducta de los pacientes puede ayudar a mejorar la calidad de vida del paciente, de su familia y de usted. Las siguientes técnicas están diseñadas para manejar el deterioro funcional y de conducta de un paciente con la enfermedad de Alzheimer. Estas estrategias han funcionado para muchas familias, a menudo demorando la institucionalización. Hable con su médico acerca de estrategias que pueden ayudarlo.</p>
+
+
+  <p>
+	<b>Tratamientos farmacológicos.</b> Varias medicaciones están disponibles en el mercado para ayudar a retrasar la severidad de los daños cognitivos, así como tratar los síntomas de conducta de la enfermedad de Alzheimer.</>
+
+  <p>
+	<b>Estrategias que promueven la independencia.</b> Intervenciones diseñadas para mejorar la funcionalidad de los pacientes también han mostrado mejorar los síntomas de la enfermedad de Alzheimer. Estas estrategias ayudan al paciente a retener habilidades mentales y físicas y ayudan con las actividades diarias de higienizarse, vestirse, arreglarse y alimentarse. Las técnicas usan incentivos recordatorios verbales y físicos, y guía física. Por ejemplo, hacer que un paciente con la enfermedad de Alzheimer elija una actividad física para comprometerse con ella durante el día, promueve independencia.
+
+  <p>
+ 	<b>¿Cuál es el momento adecuado para “abandonar” y llevar al enfermo a una residencia?</b><br>Ésta es la pregunta más espantosa y también una pregunta equivocada. Cuando se empieza a pensar en “abandonar”, se está poniendo la tarea de cuidar del familiar en un contexto de éxito o fracaso. Así, la pregunta que en realidad se está formulando es: “¿Cuándo sabré que he fracasado como cuidador?”. Pero el ingreso en una residencia no es una cuestión de abandono o de fracaso. La pregunta que un cuidador se debe plantear en todas etapas es: “¿Cuándo debería buscar ayuda para cuidarle?”. La respuesta, entonces, es: “Pronto y con frecuencia”. Estar al cuidado de un familiar enfermo puede ser un trabajo de muy larga duración, por lo que se ha de discernir entre qué se sabe hacer bien y cuándo se necesita ayuda o descanso.<br>A medida que avanza la enfermedad y la situación se va complicando, se necesitan más recursos para alcanzar los objetivos marcados en el cuidado del familiar. Entonces existen diversas opciones: centros de día, viviendas tuteladas, residencias y ayudas en el domicilio.<br>Así, puede llegar un momento en el que el cuidador principal, junto con su familia y el médico, decida que un centro que preste atención las 24 horas del día es lo que mejor se ajusta a las necesidades de todos los implicados. En este caso, el cuidador sigue desempeñando su función, pero son otras las personas quienes prestan los cuidados físicos.La decisión de llevar a la persona con demencia a un entorno más protector nunca es fácil. Para el cuidador familiar es muy duro y doloroso el tomar esta decisión; pero a veces la situación familiar es tan complicada que no tiene otra alternativa. Siempre hay que pensar en proporcionar al enfermo la máxima calidad de los cuidados que necesita.<br>
+ 	Pero son otras las personas quienes prestan los cuidados físicos.La decisión de llevar a la persona con demencia a un entorno más protector nunca es fácil. Para el cuidador familiar es muy duro y doloroso el tomar esta decisión; pero a veces la situación familiar es tan complicada que no tiene otra alternativa. Siempre hay que pensar en proporcionar al enfermo la máxima calidad de los cuidados que necesita.
+  </p>  
+   
+  </div>
+  <hr />
+</div>   
+
+</div>
+{% endblock%}

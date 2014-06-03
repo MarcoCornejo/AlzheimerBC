@@ -3,14 +3,14 @@
 {% block body -%}
 <div class="row">
     <div class="large-12 columns">
-        <h1>Nivel list</h1>
+        <h1>Lista de Niveles</h1>
 
         <table class="records_list">
             <thead>
                 <tr>
                     <th>Id</th>
                     <th>Descripcion</th>
-                    <th>Actions</th>
+                    <th>Actiones</th>
                 </tr>
             </thead>
             <tbody>
@@ -20,12 +20,12 @@
                     <td>{{ entity.Descripcion }}</td>
                     <td>
                         <ul>
-                            <li>
-                                <a href="{{ path('nivel_show', { 'id': entity.id }) }}">show</a>
-                            </li>
-                            <li>
-                                <a href="{{ path('nivel_edit', { 'id': entity.id }) }}">edit</a>
-                            </li>
+                            
+                                <a href="{{ path('nivel_show', { 'id': entity.id }) }}">Mostrar</a><br>
+                            
+                            
+                                <a href="{{ path('nivel_edit', { 'id': entity.id }) }}">Editar</a>
+                            
                         </ul>
                     </td>
                 </tr>
@@ -33,12 +33,13 @@
             </tbody>
         </table>
         <ul>
-            <li>
+            
                 <a href="{{ path('nivel_new') }}">
-                    Create a new entry
+                    Crear Nuevo Nivel
                 </a>
-            </li>
+            
         </ul>
     </div>
 </div>
+<br><br><br><br><br><br><br>
 {% endblock %}

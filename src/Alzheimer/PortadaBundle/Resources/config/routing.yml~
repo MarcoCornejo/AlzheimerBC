@@ -1,0 +1,359 @@
+homepage:
+    pattern:  /
+    defaults: { _controller: PortadaBundle:Index:index }
+# *********************************************************************
+
+quienes_somos:
+    pattern:  /quienes_somos
+    defaults: { _controller: PortadaBundle:Pages:quienes }
+
+demencia:
+    pattern:  /demencia
+    defaults: { _controller: PortadaBundle:Pages:demencia }
+
+alzheimer:
+    pattern:  /alzheimer
+    defaults: { _controller: PortadaBundle:Pages:alzheimer }
+
+factores:
+    pattern:  /factores
+    defaults: { _controller: PortadaBundle:Pages:factores }
+
+acudir:
+    pattern:  /acudir
+    defaults: { _controller: PortadaBundle:Pages:acudir }
+
+tratamientos:
+    pattern:  /tratamientos
+    defaults: { _controller: PortadaBundle:Pages:tratamientos }
+
+detectando_senales:
+    pattern:  /detectando_senales
+    defaults: { _controller: PortadaBundle:Pages:detectando }
+
+preguntas:
+    pattern:  /preguntas
+    defaults: { _controller: PortadaBundle:Pages:preguntas }
+
+diagnostico:
+    pattern:  /diagnostico
+    defaults: { _controller: PortadaBundle:Pages:diagnostico }
+
+edad_temprana:
+    pattern:  /edad_temprana
+    defaults: { _controller: PortadaBundle:Pages:edad }
+
+ninos_jovenes:
+    pattern:  /ninos_jovenes
+    defaults: { _controller: PortadaBundle:Pages:ninos }
+
+legales:
+    pattern:  /legales
+    defaults: { _controller: PortadaBundle:Pages:legales }
+
+seguridad:
+    pattern:  /seguridad
+    defaults: { _controller: PortadaBundle:Pages:seguridad }
+
+
+vida_diaria:
+    pattern:  /vida_diaria
+    defaults: { _controller: PortadaBundle:Pages:vida }
+
+
+etapas:
+    pattern:  /etapas
+    defaults: { _controller: PortadaBundle:Pages:etapas }
+
+opciones:
+    pattern:  /opciones
+    defaults: { _controller: PortadaBundle:Pages:opciones }
+
+grupos:
+    pattern:  /grupos
+    defaults: { _controller: PortadaBundle:Pages:grupos }
+
+contacto:
+    pattern:  /contacto
+    defaults: { _controller: PortadaBundle:Pages:contacto }
+
+
+# *********************************************************************
+#log_page:
+#    pattern:  /login
+#    defaults: { _controller: PortadaBundle:Login:index }
+
+login:
+    pattern: /admin/login
+    defaults: { _controller: UserBundle:Security:login }
+ 
+login_check:
+    pattern: admin/login_check
+ 
+logout:
+    pattern: /logout
+
+
+# *********************************************************************
+
+user_index:
+    pattern:  /user
+    defaults: { _controller: UserBundle:User:index }
+
+_user_index:
+    pattern:  /user/
+    defaults: { _controller: UserBundle:User:index }
+
+user_new:
+    pattern:  /user/new
+    defaults: { _controller: UserBundle:User:new }
+
+_usuario_new:
+    pattern:  /usuario/new/
+    defaults: { _controller: UsuarioBundle:Usuario:new }
+
+usuario_delete:
+    pattern:  /usuario/delete/{id}
+    defaults: { _controller: UsuarioBundle:Usuario:delete }
+
+_usuario_delete:
+    pattern:  /usuario/delete/{id}/
+    defaults: { _controller: UsuarioBundle:Usuario:delete }
+
+usuario_edit:
+    pattern:  /usuario/edit/{id}
+    defaults: { _controller: UsuarioBundle:Usuario:edit }
+
+_usuario_edit:
+    pattern:  /usuario/edit/{id}/
+    defaults: { _controller: UsuarioBundle:Usuario:edit }
+
+user_show:
+    pattern:  /user/show/{id}
+    defaults: { _controller: UserBundle:User:show }
+
+_usuario_edit:
+    pattern:  /usuario/show/{id}/
+    defaults: { _controller: UsuarioBundle:Usuario:show }
+
+usuario_update:
+    pattern:  /usuario/update/{id}
+    defaults: { _controller: UsuarioBundle:Usuario:update }
+
+
+
+role_index:
+    pattern:  /role
+    defaults: { _controller: UserBundle:Role:index }
+
+role_new:
+    pattern:  /role/new
+    defaults: { _controller: UserBundle:Role:new }
+
+
+
+
+
+
+
+
+
+
+# *********************************************************************
+usuario_index:
+    pattern:  /usuario
+    defaults: { _controller: UsuarioBundle:Usuario:index }
+
+_usuario_index:
+    pattern:  /usuario/
+    defaults: { _controller: UsuarioBundle:Usuario:index }
+
+usuario_new:
+    pattern:  /usuario/new
+    defaults: { _controller: UsuarioBundle:Usuario:new }
+
+_usuario_new:
+    pattern:  /usuario/new/
+    defaults: { _controller: UsuarioBundle:Usuario:new }
+
+usuario_delete:
+    pattern:  /usuario/delete/{id}
+    defaults: { _controller: UsuarioBundle:Usuario:delete }
+
+_usuario_delete:
+    pattern:  /usuario/delete/{id}/
+    defaults: { _controller: UsuarioBundle:Usuario:delete }
+
+usuario_edit:
+    pattern:  /usuario/edit/{id}
+    defaults: { _controller: UsuarioBundle:Usuario:edit }
+
+_usuario_edit:
+    pattern:  /usuario/edit/{id}/
+    defaults: { _controller: UsuarioBundle:Usuario:edit }
+
+usuario_show:
+    pattern:  /usuario/show/{id}
+    defaults: { _controller: UsuarioBundle:Usuario:show }
+
+_usuario_edit:
+    pattern:  /usuario/show/{id}/
+    defaults: { _controller: UsuarioBundle:Usuario:show }
+
+usuario_update:
+    pattern:  /usuario/update/{id}
+    defaults: { _controller: UsuarioBundle:Usuario:update }
+
+# *********************************************************************
+nivel_index:
+    pattern:  /nivel
+    defaults: { _controller: NivelBundle:Nivel:index }
+
+_nivel_index:
+    pattern:  /nivel/
+    defaults: { _controller: NivelBundle:Nivel:index }
+
+nivel_new:
+    pattern:  /nivel/new
+    defaults: { _controller: NivelBundle:Nivel:new }
+
+_nivel_new:
+    pattern:  /nivel/new/
+    defaults: { _controller: NivelBundle:Nivel:new }
+
+nivel_delete:
+    pattern:  /nivel/delete/{id}
+    defaults: { _controller: NivelBundle:Nivel:delete }
+
+_nivel_delete:
+    pattern:  /nivel/delete/{id}/
+    defaults: { _controller: NivelBundle:Nivel:delete }
+
+nivel_edit:
+    pattern:  /nivel/edit/{id}
+    defaults: { _controller: NivelBundle:Nivel:edit }
+
+_nivel_edit:
+    pattern:  /nivel/edit/{id}/
+    defaults: { _controller: NivelBundle:Nivel:edit }
+
+nivel_show:
+    pattern:  /nivel/show/{id}
+    defaults: { _controller: NivelBundle:Nivel:show }
+
+_nivel_edit:
+    pattern:  /nivel/show/{id}/
+    defaults: { _controller: NivelBundle:Nivel:show }
+
+nivel_create:
+    pattern:  /nivel/create
+    defaults: { _controller: NivelBundle:Nivel:create }
+
+nivel_update:
+    pattern:  /nivel/update/{id}
+    defaults: { _controller: NivelBundle:Nivel:update }
+
+# *********************************************************************
+grupo_index:
+    pattern:  /grupo
+    defaults: { _controller: GrupoBundle:Grupo:index }
+
+_grupo_index:
+    pattern:  /grupo/
+    defaults: { _controller: GrupoBundle:Grupo:index }
+
+grupo_new:
+    pattern:  /grupo/new
+    defaults: { _controller: GrupoBundle:Grupo:new }
+
+_grupo_new:
+    pattern:  /grupo/new/
+    defaults: { _controller: GrupoBundle:Grupo:new }
+
+grupo_delete:
+    pattern:  /grupo/delete/{id}
+    defaults: { _controller: GrupoBundle:Grupo:delete }
+
+_grupo_delete:
+    pattern:  /grupo/delete/{id}/
+    defaults: { _controller: GrupoBundle:Grupo:delete }
+
+grupo_edit:
+    pattern:  /grupo/edit/{id}
+    defaults: { _controller: GrupoBundle:Grupo:edit }
+
+_grupo_edit:
+    pattern:  /grupo/edit/{id}/
+    defaults: { _controller: GrupoBundle:Grupo:edit }
+
+grupo_show:
+    pattern:  /grupo/show/{id}
+    defaults: { _controller: GrupoBundle:Grupo:show }
+
+_grupo_edit:
+    pattern:  /grupo/show/{id}/
+    defaults: { _controller: GrupoBundle:Grupo:show }
+
+grupo_create:
+    pattern:  /grupo/create
+    defaults: { _controller: GrupoBundle:Grupo:create }
+
+grupo_update:
+    pattern:  /grupo/update/{id}
+    defaults: { _controller: GrupoBundle:Grupo:update }
+
+#*********************noticias***********************
+
+noticias_index:
+    pattern:  /noticias
+    defaults: { _controller: NoticiasBundle:Noticias:index }
+
+_noticias_index:
+    pattern:  /noticias/
+    defaults: { _controller: NoticiasBundle:Noticias:index }
+
+noticias_new:
+    pattern:  /noticias/new
+    defaults: { _controller: NoticiasBundle:Noticias:new }
+
+_noticias_new:
+    pattern:  /noticias/new/
+    defaults: { _controller: NoticiasBundle:Noticias:new }
+
+noticias_delete:
+    pattern:  /noticias/delete/{id}
+    defaults: { _controller: NoticiasBundle:Noticias:delete }
+
+_noticias_delete:
+    pattern:  /noticias/delete/{id}/
+    defaults: { _controller: NoticiasBundle:Noticias:delete }
+
+noticias_edit:
+    pattern:  /noticias/edit/{id}
+    defaults: { _controller: NoticiasBundle:Noticias:edit }
+
+_noticias_edit:
+    pattern:  /noticias/edit/{id}/
+    defaults: { _controller: NoticiasBundle:Noticias:edit }
+
+noticias_show:
+    pattern:  /noticias/show/{id}
+    defaults: { _controller: NoticiasBundle:Noticias:show }
+
+_noticias_edit:
+    pattern:  /noticias/show/{id}/
+    defaults: { _controller: NoticiasBundle:Noticias:show }
+
+noticias_create:
+    pattern:  /noticias/create
+    defaults: { _controller: NoticiasBundle:Noticias:create }
+
+noticias_update:
+    pattern:  /noticias/update/{id}
+    defaults: { _controller: NoticiasBundle:Noticias:update }
+
+noticias_publicas:
+    pattern:  /noticias_publicas
+    defaults: { _controller: NoticiasBundle:NoticiasPublicas:index }
+
+

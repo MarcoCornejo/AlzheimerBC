@@ -1,0 +1,51 @@
+{% extends '::frontend.html.twig' %}
+
+{% block body -%}
+<div class="row">
+	<div class="large-12 columns">
+		<h2>Noticias</h2><br><br>
+		<ul class="small-block-grid-3 large-block-grid-6" align="center">
+
+			{% for entity in entities %}
+			<li>
+				<p class="lead"><a href="#" data-reveal-id="modal{{ entity.id }}">{{ entity.titulo }}</a></p>
+
+				<a href="#" data-reveal-id="modal{{ entity.id }}">
+					{% if entity.imagenPrim %}        
+					<img src="{{ asset('uploads/images/noticias/' ~ entity.imagenPrim) }}" alt=""  />      
+					{% else %}
+					<img src="{{ asset('uploads/images/noticias/image-notfound.jpg') }}" alt="" />            
+					{% endif %}
+				</a>
+
+				<div id="modal{{ entity.id }}" class="reveal-modal large" data-reveal>
+					<div class="row">
+						<div class="large-4 columns">
+							{% if entity.imagenPrim %}
+							<img src="{{ asset('uploads/images/noticias/' ~ entity.imagenPrim) }}" alt=""  />      
+							{% else %}
+							<img src="{{ asset('uploads/images/noticias/image-notfound.jpg') }}" alt=""/>
+							{% endif %} 
+						</div>
+						<div class="large-8 columns">
+							<p class="lead">{{ entity.titulo }}</p>							
+							<p>{{ entity.fecha|date("d \\-\\ F  \\-\\ Y", "America/Tijuana") }}</p>
+							<p>{{ entity.cuerpo }}</p>
+							{% if entity.imagenSec %}
+							<img src="{{ asset('uploads/images/noticias/' ~ entity.imagenSec) }}" alt=""/>
+							{% else %}
+							<img src="{{ asset('uploads/images/noticias/image-notfound.jpg') }}" alt=""/>
+							{% endif %} 
+						</div>
+					</div>
+					<a class="close-reveal-modal">&#215;</a>
+				</div>
+
+
+			</li>
+			{%endfor%}
+		</ul>
+	</div>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+{% endblock %}

@@ -15,3 +15,6 @@ nivel:
     resource: "@NivelBundle/Resources/config/routing.yml"
     prefix:   /
 
+noticias:
+    resource: "@NoticiasBundle/Resources/config/routing.yml"
+    prefix:   /

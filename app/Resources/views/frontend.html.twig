@@ -28,51 +28,51 @@
 		      <li class="has-dropdown">
 		        <a href="#">Alzheimer</a>
 		        <ul class="dropdown">
-		          <li><a href="/app_dev.php/queEsDemencia">Que es la demencia</a></li>
-		          <li><a href="/app_dev.php/queEsAlzheimer">Que es el Alzheimer</a></li>
-		          <li><a href="/app_dev.php/factoresDeRiesgo">Factores de Riesgo</a></li>
-		          <li><a href="/app_dev.php/aQuienAcudir">A quien acudir</a></li>
-		          <li><a href="/app_dev.php/tratamientos">Tratamientos</a></li>
-		          <li><a href="/app_dev.php/detectandoSenales">Detectando señales de alarma</a></li>
-		          <li><a href="/app_dev.php/FAQ">Preguntas mas frecuentes</a></li>
+		          <li><a href="{{ path('demencia') }}">Que es la demencia</a></li>
+		          <li><a href="{{ path('alzheimer') }}">Que es el Alzheimer</a></li>
+		          <li><a href="{{ path('factores') }}">Factores de Riesgo</a></li>
+		          <li><a href="{{ path('acudir') }}">A quien acudir</a></li>
+		          <li><a href="{{ path('tratamientos') }}">Tratamientos</a></li>
+		          <li><a href="{{ path('detectando_senales') }}">Detectando señales de alarma</a></li>
+		          <li><a href="{{ path('preguntas') }}">Preguntas mas frecuentes</a></li>
 		        </ul>
 		      </li>
 
 		      <li class="has-dropdown">
 		        <a href="#">Vida con Alzheimer</a>
 		        <ul class="dropdown">
-		          <li><a href="/app_dev.php/teDiagnosticaronAlzheimer">Te diagnosticaron Alzheimer</a></li>
-		          <li><a href="/app_dev.php/alzheimerEdadTemprana">Alzheimers en Edad Temprana</a></li>
-		          <li><a href="/app_dev.php/ninosyjovenes">Los ninos y Jovenes conviviendo con Alzheimer</a></li>
-		          <li><a href="/app_dev.php/situacionesLegales">Situaciones Legales</a></li>
-		          <li><a href="/app_dev.php/seguridad">Seguridad</a></li>
+		          <li><a href="{{ path('diagnostico') }}">Te diagnosticaron Alzheimer</a></li>
+		          <li><a href="{{ path('edad_temprana') }}">Alzheimers en Edad Temprana</a></li>
+		          <li><a href="{{ path('ninos_jovenes') }}">Los ninos y Jovenes conviviendo con Alzheimer</a></li>
+		          <li><a href="{{ path('legales') }}">Situaciones Legales</a></li>
+		          <li><a href="{{ path('seguridad') }}">Seguridad</a></li>
 		        </ul>
 		      </li>
 
 			  <li class="has-dropdown">
 			    <a href="#">Cuidadores</a>
 			    <ul class="dropdown">
-			      <li><a href="/app_dev.php/vidaDiaria">Vida Diaria (Cuidados y Actividades en casa)</a></li>
-			      <li><a href="/app_dev.php/etapas">Etapas y Comportamientos</a></li>
-			      <li><a href="/app_dev.php/opciones">Opciones de cuidados</a></li>
-			      <li><a href="/app_dev.php/grupos">Grupos de apoyo</a></li>
+			      <li><a href="{{ path('vida_diaria') }}">Vida Diaria (Cuidados y Actividades en casa)</a></li>
+			      <li><a href="{{ path('etapas') }}">Etapas y Comportamientos</a></li>
+			      <li><a href="{{ path('opciones') }}">Opciones de cuidados</a></li>
+			      <li><a href="{{ path('grupos') }}">Grupos de apoyo</a></li>
 			    </ul>
 			  </li>
 
 			  <li class="has-dropdown">
 			    <a href="#">Noticias y Eventos</a>
 			    <ul class="dropdown">
-			      <li><a href="#">Noticias</a></li>
+			      <li><a href="{{ path('noticias_publicas') }}">Noticias</a></li>
 			      <li><a href="#">Eventos</a></li>
 			    </ul>
 			  </li>
 
 			  <li>
-		        <a href="#">Contactos</a>
+		        <a href="{{ path('contacto') }}">Contactos</a>
 		      </li>
 
 			  <li class="has-form">
-			  	<a class="button alert" href="{{ path('log_page') }}">Ingresar</a>
+			  	<a class="button alert" href="#">Ingresar</a>
 			  </li>
 			</ul>
 
@@ -83,11 +83,11 @@
 	<!-- Logo -->
 	<div class="row">
 	<br>
-		<div class="large-12 columns">
+		<!--<div class="large-12 columns">
 			<a href="#">
 				<img src="{{ asset('bundles/portada/img/logo.png') }}">
 			</a>
-		</div>
+		</div>-->
 	</div>
 
 	<!-- Separator -->
@@ -107,16 +107,17 @@
 			<hr>
 		</div>
 	</div>
-
+<div class="pie">
 <div class="row" style=" text-align:center;">
-	<div class="pie">
+	
 		<div class="medium-10 columns"><br>
-			<p><h5 style="color:#FFFFFF;">Copyright © 2014  Instituto Tecnológico de Mexicali</h5></p>
+		<h5 style="color:#FFFFFF;">Copyright © 2014  Instituto Tecnológico de Mexicali</h5>
+	  	<a href="https://www.facebook.com/alzheimerbaja" target="_blank">
+	  	 <img id="image" title="Siguenos en Facebook!" src="{{ asset('bundles/portada/img/icons/webicon-facebook.png')}}">
+	  	 </a>
 		</div>
 
-		<div class="small-1 columns"><br>
-			<p><a><img src="{{ asset('bundles/portada/img/icons/webicon-facebook.png')}}"></a></p>
-		</div>
+		
 	</div><br>
 </div>
 

@@ -1,0 +1,19 @@
+{% extends '::frontend.html.twig' %}
+
+{% block body -%}
+
+<div class="row">
+	<div class="large-12 columns">
+		<h1>Creaci&oacute;n de Grupos </h1>
+		{{ form(form) }}
+		<ul class="record_actions">
+			
+				<a href="{{ path('grupo_index') }}">
+					Regresar
+				</a>
+			
+		</ul>
+	</div>
+</div>
+<br><br><br><br><br><br><br>
+{% endblock %}

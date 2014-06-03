@@ -21,11 +21,11 @@
                     <td>{{ entity.nombre }}</td>
                 </tr>
                 <tr>
-                    <th>A_paterno</th>
+                    <th>Apellido Paterno</th>
                     <td>{{ entity.apaterno }}</td>
                 </tr>
                 <tr>
-                    <th>A_materno</th>
+                    <th>Apellido Materno</th>
                     <td>{{ entity.amaterno }}</td>
                 </tr>
                 <tr>
@@ -34,7 +34,13 @@
                 </tr>
                 <tr>
                     <th>Foto</th>
-                    <td><img src="{{ asset('uploads/images/usuarios/') ~ entity.rutaFoto }}" /></td>
+                    <td>
+			{% if entity.rutaFoto%}
+                        <img src="{{ asset('uploads/images/usuarios/') ~ entity.rutaFoto }}" />
+			{% else %}
+			<img src="{{ asset('uploads/images/usuarios/image-notfound.jpg') }}" />
+                        {% endif %}
+                    </td>
                 </tr>
                 <tr>
                     <th>Contacto</th>
@@ -53,17 +59,17 @@
         </table>
 
         <ul class="record_actions">
-            <li>
+            
                 <a href="{{ path('usuario_index') }}">
-                    Back to the list
-                </a>
-            </li>
-            <li>
+                    Regresar
+                </a><br>
+            
+            
                 <a href="{{ path('usuario_edit', { 'id': entity.id }) }}">
-                    Edit
+                    Editar
                 </a>
-            </li>
-            <li>{{ form(delete_form) }}</li>
+            
+            {{ form(delete_form) }}
         </ul>
 
     </div>

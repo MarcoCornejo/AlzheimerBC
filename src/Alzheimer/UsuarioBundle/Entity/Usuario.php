@@ -73,6 +73,14 @@ class Usuario
     /**
      * @var string
      *
+     * @ORM\Column(name="password", type="string", length=15)
+     */
+    private $password;
+
+
+    /**
+     * @var string
+     *
      * @ORM\Column(name="contacto", type="text")
      */
     private $contacto;
@@ -214,6 +222,31 @@ class Usuario
     }
 
     /**
+     * Set password
+     *
+     * @param string $password
+     * @return Usuario
+     */
+    public function setPassword($password)
+    {
+        $this->password = $password;
+
+        return $this;
+    }
+
+    /**
+     * Get password
+     *
+     * @return string 
+     */
+    public function getPassword()
+    {
+        return $this->password;
+    }
+
+
+
+    /**
      * Set contacto
      *
      * @param string $contacto
@@ -239,7 +272,7 @@ class Usuario
     /**
      * Set nivel_ID
      *
-     * @param \int \Alzheimer\NivelBundle\Entity\Nivel
+     * @param  \Alzheimer\NivelBundle\Entity\Nivel
      * @return Nivel
      */
     public function setNivelID(\Alzheimer\NivelBundle\Entity\Nivel $nivelID)
@@ -260,7 +293,7 @@ class Usuario
     /**
      * Set grupo_ID
      *
-     * @param \int \Azlheimer\GrupoBundle\Entity\Grupo
+     * @param  \Azlheimer\GrupoBundle\Entity\Grupo
      * @return Grupo
      */
     public function setGrupoID(\Alzheimer\GrupoBundle\Entity\Grupo $grupoID)

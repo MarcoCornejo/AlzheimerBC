@@ -3,18 +3,24 @@
 {% block body -%}
 <div class="row">
 	<div class="small-12 columns">
-		<h1>Nivel edit</h1>
-
+		<h1>Editar Nivel</h1>
+	 <div class="large-8 columns">
 		{{ form(edit_form) }}
+        </div>
+    </div>
+</div>
 
+<div class="row">
+    <div class="small-12 columns">
 		<ul class="record_actions">
-			<li>
+			
 				<a href="{{ path('nivel_index') }}">
-					Back to the list
+				Regresar
 				</a>
-			</li>
-			<li>{{ form(delete_form) }}</li>
+			
+			{{ form(delete_form) }}
 		</ul>
 	</div>
 </div>
+<br><br><br><br><br><br>
 {% endblock %}

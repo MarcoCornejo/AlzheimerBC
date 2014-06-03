@@ -19,6 +19,9 @@ class AppKernel extends Kernel
             new Alzheimer\PortadaBundle\PortadaBundle(),
             new Alzheimer\NivelBundle\NivelBundle(),
             new Alzheimer\GrupoBundle\GrupoBundle(),
+            new Alzheimer\UsuarioBundle\UsuarioBundle(),
+
+	    new Alzheimer\UsuarioBundle\NoticiasBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

@@ -1,0 +1,36 @@
+{% extends '::frontend.html.twig' %}
+
+{% block body -%}
+<div class="row">
+    <div class="large-8 columns">
+    <h1>Grupo</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Descripcion</th>
+                <td>{{ entity.Descripcion }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    
+        <a href="{{ path('grupo_index') }}">
+            Regresar
+        </a>
+    
+        <a href="{{ path('grupo_edit', { 'id': entity.id }) }}">
+            Editar
+        </a>
+    
+    {{ form(delete_form) }}
+</ul>
+    </div>
+</div>
+<br><br><br><br><br><br>
+{% endblock %}

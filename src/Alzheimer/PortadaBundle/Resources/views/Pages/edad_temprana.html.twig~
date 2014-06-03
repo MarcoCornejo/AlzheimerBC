@@ -1,0 +1,47 @@
+{% extends '::frontend.html.twig' %}
+
+{% block body %}
+
+<div class="row">
+<hr />  
+  <div class="small-10 columns">
+   <h1 class="title" style="color:#009966;">Alzheimers en edad temprana</h1>
+   <p>
+   	Alrededor de un 3% de las personas que padecen de Alzheimer tiene menos de sesenta años. La temprana 	edad de estos pacientes hace de ellos un grupo de población diferente que necesita una atención médica y unos cuidados específicos.<br><br>
+	Extendida y frecuente entre las personas mayores, la enfermedad de Alzheimer es difícilmente concebible en jóvenes dotados de una buena salud física y con una actividad profesional y familiar. ¿Existen factores de riesgo? ¿Cómo diagnosticar, seguir y ayudar a estos particulares enfermos?
+   </p>
+
+   <h4>Alzheimer precoz: la genética apenas influye</h4>
+   <p>
+   		Solamente un 0,7% de las personas enfermas de Alzheimer (EA) es portador de un gen defectuoso. Sin embargo, cuando la enfermedad tiene un origen genético se manifiesta más rápidamente. Tanto es así que el 18% de los afectados menores de 60 años padece alguna forma genética de alzheimer. El profesor Bruno Dubois, neurólogo del Hospital Pitié-Salpêtrière, explica:  Existen tres genes identificados. Su transmisión es autosómica dominante, lo cual quiere decir que una persona que padezca una versión alterada del gen llevará fatal la enfermedad y la transmitirá, según las estadísticas, a la mitad de su descendencia.<br><br>
+		En los casos restantes (el 82% restante de los enfermos que sufren un trastrono precoz) no hay una causa evidente de la aparición de la EA y los factores de riesgo son exactamente los mismos que para los demás afectados. Entre las causas encontramos algunas de orden genético (como la apolipoproteína E4), aunque, a diferencia de las mutaciones anteriores, éstas sólo aumentan la probabilidad de desarrollar la enfermedad, de la misma manera que otros genes determinan nuestro sexo o hacen que seamos más propensos a sufrir una patología cardiovascular.
+   </p>
+
+   <h4>Alzheimer: ¿Cuáles son los primeros síntomas en la población menor de 60 años?</h4>
+   <p>
+   		Al contrario de lo que ocurre en el caso de personas mayores, dónde los síntomas de la EA se superponen a los de otras patologías, entre los pacientes más jóvenes éstos se manifiestan de forma más "pura y característica", explica el especialista. Los trastornos de la memoria a corto plazo son comunes para la totalidad de los afectados de la enfermedad de Alzheimer. Sin embargo, a mayores, en los pacientes jóvenes, se observan a menudo en un primer plano trastornos cognitivos relacionados con las funciones instrumentales (modulación de los gestos, del lenguaje, del cálculo, de la atención visual y espacial...). Estos síntomas se manifiestan mediante dificultades a la hora de utilizar un objeto como una llave, de encontrar las palabras, de reconocer un rostro... El alcance de las funciones frontales que corresponden a las capacidades de raciocinio y de ejecución  de tareas puede revelarse de manera más tardía. Llegados a esta fase, los pacientes presentarán dificultades para contener sus emociones, adaptarse a nuevas situaciones, realizar varias actividades a la vez.<br><br>
+
+   		Los pacientes jóvenes se dan cuenta rápidamente de sus impedimentos, señala Judith Mollard, de la asociación France Alzheimer. Su entorno se empieza a plantear preguntas, aparecen las primeras sanciones profesionales, etc. Muchos de ellos presentan además síntomas de depresión que pueden retrasar el diagnóstico.
+   </p>
+
+   <h4>¿Cómo se diagnostica la enfermedad de Alzheimer?</h4>
+
+   <p>
+   		Antes de nada debemos dirigirnos a nuestro médico de cabecera o médico de empresa que nos enviará, en caso necesario, a un especialista en neurología. Determinado tipo de pacientes podrán ser orientados hacia un centro de referencia para enfermos jóvenes.<br><br>
+		El médico de cabecera utilizará tests rutinarios que permiten diferenciar un posible caso de EA de otros trastornos no específicos, explica el profesor Dubois. Exámenes complementarios, como el diagnóstico mediante resonancia magnética de manera particular, permitirán descartar otras patologías y, sobre todo, observar una eventual distrofia del hipocampo. Esta estructura, relacionada con la memoria reciente, es una de las primeras a resultar afectada en caso de EA.<br><br>
+		Llegados a esta etapa, el diagnóstico se da por finalizado para las personas de edades avanzadas. Sin embargo, en el caso de los jóvenes los exámenes se proseguirán dado que son ellos los que más se la juegan. El examen del líquido cefalorraquídeo, extraído mediante punción lumbar, permite detectar la presencia de marcadores biológicos que van a confirmar con seguridad que se trata de un caso de Alzheimer, matiza el neurólogo. De igual modo, el especialista puede solicitar un PET Scan para visualizar las lesiones
+   </p>
+
+   <h4>Tratamientos para el Alzheimer precoz</h4>
+
+   <p>
+   		Los tratamientos son sintomáticos. El profesor Dubois precisa: Se trata de las mismas moléculas que las utilizadas en los pacientes de edades avanzadas. Por lo general se utilizan inhibidores de la acetilcolinesterasa que permiten estabilizar durante un cierto tiempo los trastornos cognitivos y mejorar la calidad de vida. Diversos estudios han demostrado que los pacientes sometidos a un placebo antes de ser tratados con medicación eran incapaces de alcanzar unos resultados y una mejoría equivalentes a la de aquellos bajo tratamiento médico desde el principio. Este hecho podría justificar la instauración precoz de los tratamientos. Hoy, las investigaciones tienen como objetivo encontrar una cura para esta enfermedad.<br><br>
+		Cabe destacar igualmente la importancia de mantener una cierta vida social y de llevar a cabo diversas actividades, pudiendo estas ajustarse en función de las capacidades y necesidades de cada paciente. A nivel profesional, por ejemplo, se puede adaptar el puesto de trabajo y/o intentar que el trabajador pueda gozar de jornada laboral a tiempo partido por razones terapéuticas.
+   </p>
+   
+  </div>
+  <hr />
+</div>   
+
+</div>
+{% endblock%}

@@ -1,0 +1,21 @@
+{% extends '::frontend.html.twig' %}
+
+{% block body -%}
+<div class="row">
+	<div class="large-12 columns">
+
+		<h1>Creaci&oacute;n de Niveles</h1>
+
+		{{ form(form) }}
+
+		<ul class="record_actions">
+			
+				<a href="{{ path('nivel_index') }}">
+					Regresar
+				</a>
+			
+		</ul>
+	</div>
+</div>
+<br><br><br><br><br><br>
+{% endblock %}

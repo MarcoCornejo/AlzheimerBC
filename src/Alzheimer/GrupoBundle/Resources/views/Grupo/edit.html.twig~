@@ -1,0 +1,27 @@
+{% extends '::frontend.html.twig' %}
+
+{% block body -%}
+
+<div class="row">
+    <div class="small-12 columns">
+        <h1>Editar Grupo</h1>
+        <div class="large-8 columns">
+            {{ form(edit_form) }}
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-12 columns">
+        <ul class="record_actions">
+            
+                <a href="{{ path('usuario_index') }}">
+                    Regresar
+                </a>
+            
+            {{ form(delete_form) }}
+        </ul>
+    </div>
+</div>
+<br><br><br><br>
+{% endblock %}

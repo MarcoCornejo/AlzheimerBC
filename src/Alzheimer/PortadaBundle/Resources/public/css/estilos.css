@@ -1,6 +1,12 @@
 .pie{
 	background: url("http://alzheimer.dev/bundles/portada/img/strip");
 	height:100px;
+	
+}
+#image{
+	position: absolute;
+	top: 45px; 
+	left: auto;
 }
 
 #image:hover{
@@ -10,3 +16,8 @@
 	-ms-transform: scale(1.1);
 	 transform: scale(1.1);
  }
+
+li a{
+    text-decoration:none;
+
+}

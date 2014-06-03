@@ -1,0 +1,53 @@
+{% extends '::frontend.html.twig' %}
+
+{% block body -%}    
+
+<div class="row">
+	<div class="large-12 columns">
+<h1>Noticias</h1>
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                
+            </tr>
+            <tr>
+                <th>Titulo</th>
+                <td>{{ entity.titulo }}</td>
+            </tr>
+            <tr>
+                <th>Cuerpo</th>
+                <td>{{ entity.cuerpo }}</td>
+            </tr>
+            <tr>
+                <th>Fecha</th>
+                <td>{{ entity.fecha|date('d-m-Y') }}</td>
+            </tr>
+            <tr>
+		 <td><ul class="small-block-grid-2">
+		  <li><img src="{{ asset('uploads/images/noticias/') ~ entity.imagenPrim }}" /></li>
+		  <li><img src="{{ asset('uploads/images/noticias/') ~ entity.imagenSec }}" /></li>
+		  </td>
+		</ul>            
+           
+              
+            </tr>
+            
+        </tbody>
+    </table>
+</div>
+        <ul class="record_actions">
+    <!--<li>-->
+        <a href="{{ path('noticias_index') }}">
+            Regresar
+        </a><br>
+    <!--</li>
+    <li>-->
+        <a href="{{ path('noticias_edit', { 'id': entity.id }) }}">
+            Editar
+        </a>
+    <!--</li>-->
+    <!--<li>-->{{ form(delete_form) }}<!--</li>-->
+</ul>
+ </div>
+</div>
+{% endblock %}

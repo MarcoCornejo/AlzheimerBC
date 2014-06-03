@@ -1,6 +1,7 @@
-alumno:
-    resource: "@AlumnoBundle/Resources/config/routing.yml"
+usuario:
+    resource: "@UsuarioBundle/Resources/config/routing.yml"
     prefix:   /
+
 
 portada:
     resource: "@PortadaBundle/Resources/config/routing.yml"

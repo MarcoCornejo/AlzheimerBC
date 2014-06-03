@@ -19,19 +19,18 @@
     </table>
 
         <ul class="record_actions">
-    <li>
+    
         <a href="{{ path('grupo_index') }}">
-            Back to the list
-        </a>
-    </li>
-    <li>
+            Regresar
+        </a><br>
+    
         <a href="{{ path('grupo_edit', { 'id': entity.id }) }}">
-            Edit
+            Editar
         </a>
-    </li>
-    <li>{{ form(delete_form) }}</li>
+    
+    {{ form(delete_form) }}
 </ul>
     </div>
 </div>
-
+<br><br><br><br><br><br>
 {% endblock %}

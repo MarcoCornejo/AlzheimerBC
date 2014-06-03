@@ -1,0 +1,29 @@
+{% extends '::frontend.html.twig' %}
+
+{% block body %}
+
+<div class="row">
+<hr />  
+  <div class="small-10 columns">
+  <h1 class="title" style="color:#009966;">Situaciones legales</h1>
+
+  <p>
+  	Lo ideal es que los documentos  legales que se describen a continuación se hayan formalizado antes de un diagnóstico de Alzheimer. De lo contrario, la persona que padece la enfermedad y el cuidador o el acompañante deberían consultar a un abogado lo antes posible, puesto que estos documentos no puede completarse si se declara a la persona legalmente incompetente. Las personas que atraviesan los primeros estadios de la enfermedad no se consideran incompetentes de forma automática y probablemente, serán capaces de comprender estas cuestiones y tomar las decisiones correspondientes.</p>
+
+  <p>
+	   La información que se incluye a continuación contiene declaraciones de carácter general y no debe interpretarse como asesoramiento legal. Para obtener asesoramiento legal, se puede recurrir a los servicios del abogado de la familia, aunque también existen abogados que se especializan en derecho de la tercera edad. Estos profesionales pueden ayudar a interpretar las leyes estatales y asegurar el respeto de los deseos del enfermo. Los abogados que se especializan en derecho de la tercera edad son expertos en las cuestiones legales que atañen a los ancianos, tales como los cuidados a largo plazo, los impuestos y la planificación testamentaria. Las agencias locales sobre asuntos de la tercera edad quizás puedan derivarlo a un asesor legal. Existen asociaciones estatales de asesoría legal que brindan servicios asequibles.</p>
+ 
+  <p>
+	   Si bien es probable que las personas a quienes se les acaba de diagnosticar la enfermedad se sientan angustiadas, se les debería alentar a que participen de forma activa en estas conversaciones legales. Esto podría brindarles una mayor sensación de control y de calma. Las personas que presenten discapacidades leves deberían participar tanto como fuese posible, de esta manera, podrían tomar, aunque sea ciertas decisiones. En el caso que el enfermo de Alzheimer se resista a tomar medidas, es posible que, a fin de garantizar un futuro legal seguro, se requiera la intervención de un profesional imparcial, un amigo íntimo o un miembro de la familia que sea firme, pero comprensivo. Sea como fuere, las personas que padecen Alzheimer deben tener sumo cuidado a la hora de elegir a sus representantes y de decidir qué facultades les concederán. si aún no se han formalizado, las directivas médicas legales deberían incluir el otorgamiento de un poder legal duradero para el cuidado de la salud y la preparación de un testamento en vida. </p>
+
+  <p>
+    También se deben formalizar documentos financieros legales (un poder legal duradero para asuntos financieros, un testamento y posiblemente, un fideicomiso en vida), si aún no existen. Estos documentos deberían examinarse en forma periódica para asegurarse de que estén actualizados. Puesto que las leyes varían según el estado, si la persona se muda, es posible que los documentos deban modificarse. Los familiares o los cuidadores deberían conocer la ubicación de los originales y poseer copias de éstos. El médico de la persona debería tener copias de los documentos legales relacionados con la salud.
+   </p>
+  
+   
+  </div>
+  <hr />
+</div>   
+
+</div>
+{% endblock%}

@@ -1,0 +1,85 @@
+{% extends '::frontend.html.twig' %}
+
+{% block body %}
+
+<div class="row">
+
+  <div class="small-10 columns">
+  <h1 class="title" style="color:#009966;">¿Que es la Demencia?</h1>
+  
+  <p>
+	 La demencia no es una enfermedad específica. Es un término general que describe una amplia gama de síntomas asociados a una disminución de la memoria y otras habilidades de pensamiento lo suficientemente severos como para reducir la capacidad de una persona para realizar las actividades cotidianas.
+	 La enfermedad de Alzheimer representa el 60 a 80 por ciento de los casos. La demencia vascular, que se produce después de un accidente cerebrovascular, es el segundo tipo de demencia más común. Pero hay muchas otras enfermedades que pueden causar síntomas de demencia, incluyendo algunos que son reversibles, como:</p>
+
+	 <li>Depresión</li>
+	 <li>Los efectos secundarios de los medicamentos</li>
+	 <li>El uso excesivo de alcohol</li>
+	 <li>Problemas de la tiroides</li>
+	 <li>Las deficiencias de vitaminas</li><br />
+
+  <p>
+    La demencia a menudo se refiere incorrectamente como "senilidad" o "demencia senil", que refleja la creencia anteriormente generalizada pero errónea de que el deterioro mental grave es una parte normal del envejecimiento.
+  </p>
+
+  <h4>Sintomas de la Demencia</h4>
+   
+   <p>
+   	Mientras que los síntomas de la demencia pueden variar , al menos dos de las siguientes funciones mentales básicas deben verse afectadas significativamente para ser considerado demencia:
+   </p>
+   		<li>Memoria</li>
+   		<li>Comunicación y lenguaje</li>
+   		<li>Capacidad para concentrarse y prestar atención</li>
+   		<li>Razonamiento y juicio</li>
+   		<li>Percepción Visual</li><br />
+
+   	<p>
+   		Las personas con demencia pueden tener problemas con la memoria a corto plazo, con desubicar donde dejó la bolsa o cartera, olvidar  pagar las cuentas, planear y  preparar las comidas,  en recordar citas o desubicarse al manejar fuera de la colonia.Muchas demencias son progresivas, esto es, los síntomas  comienzan a aparecer lentamente y empeoran gradualmente. Si usted o un ser querido está experimentando problemas de memoria u otros cambios en las habilidades de pensamiento, no los ignore. Consulte a un médico para  determinar la causa.
+   	</p>
+
+   	<h4>¿Como podemos prevenir o disminuir el riesgo a una Demencia?</h4>
+
+   	<p>
+   		Algunos factores de riesgo para la demencia, tales como la edad y la genética, no se pueden cambiar. Pero los investigadores continúan buscando el impacto de otros factores de riesgo en la salud del cerebro y la prevención de la demencia.<br />
+		Para disminuir el riesgo debemos cuidar lo siguiente:  
+   	</p>
+   	
+   	<ol type="a">
+   		<li>Factores cardiovasculares</li>
+   		<li>El acondicionamiento físico</li>
+   		<li>Alimentación</li>
+   	</ol>
+
+   	<h5>Factores Cardiovasculares:</h5>
+   	<p>
+   		El cerebro se nutre de una de las redes más ricas de su cuerpo que son los vasos sanguíneos. Cualquier cosa que dañe los vasos sanguíneos en cualquier parte del cuerpo puede dañar los vasos sanguíneos en el cerebro, privando a las células del cerebro de los alimentos vitales y oxígeno.</p>
+
+	<p>	 Cambios en los vasos sanguíneos en el cerebro están relacionados con la demencia 	   vascular. A menudo están presentes junto con los cambios causados ​​por otros 
+		tipos de demencia, incluyendo la enfermedad de Alzheimer y la demencia con Cuerpos de Lewy. Estos cambios pueden interactuar para causar deterioro más rápido o hacer alteraciones más graves.</p>
+
+	<p>	
+		 Puede ayudar a proteger su cerebro con algunas de las mismas estrategias que protegen a su corazón:
+
+   	</p>
+
+   	<li>No fumar</li>
+   	<li>Mantener su presión arterial, colesterol y azúcar en la sangre dentro de los límites recomendados</li>
+   	<li>Mantener un peso saludable.</li><br />
+
+   	<h5>Acondicionamiento Fisico</h5>
+
+   	<p>
+   		 El ejercicio físico puede ayudar a reducir el riesgo de algunos tipos de demencia. Se ha comprobado que el  ejercicio puede beneficiar directamente a las células del cerebro mediante el aumento de flujo de sangre y oxígeno al cerebro.
+   	</p>
+
+   	<p>
+   		<b>Dieta:</b> Lo que usted come puede tener  su mayor impacto en la salud del cerebro a través de su efecto sobre la salud del corazón. Las pruebas mas  actuales nos indican  que los patrones de alimentación saludables para el corazón, tales como la dieta mediterránea, también pueden ayudar a proteger el cerebro. Una dieta mediterránea incluye relativamente poca carne roja y hace hincapié en granos enteros, frutas, verduras, pescados, mariscos, nueces, el aceite de oliva y otras grasas saludables.
+   	</p>
+
+  </div>
+  
+</div>  
+  
+ 
+
+</div>
+{% endblock%}

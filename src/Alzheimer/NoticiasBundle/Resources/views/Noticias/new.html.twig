@@ -1,0 +1,35 @@
+{% extends '::frontend.html.twig' %}
+
+{% block body -%}
+    
+<div class="row">
+	<div class="large-7 columns">
+		<h1>Creaci&oacute;n de Noticias</h1>
+		<fieldset>
+            <legend>Noticias</legend>
+            {{ form_start(form, { 'action': path('noticias_new'), 'method': 'POST' }) }} 
+                {{ form_label(form.titulo, 'Titulo') }}
+                {{ form_widget(form.titulo) }}
+                {{ form_label(form.cuerpo, 'Cuerpo') }}
+                {{ form_widget(form.cuerpo) }}
+                {{ form_label(form.fecha, 'Fecha') }}
+                {{ form_widget(form.fecha) }}
+                {{ form_label(form.imagenPrim, 'Imagen Principal') }}
+                {{ form_widget(form.imagenPrim) }}
+                {{ form_errors(form.imagenPrim) }}
+                {{ form_label(form.imagenSec, 'Imagen Secundaria') }}
+                {{ form_widget(form.imagenSec) }}
+                {{ form_errors(form.imagenSec) }}
+                 <br><br>
+            {{ form_end(form) }}
+        </fieldset>
+		<ul class="record_actions">
+			<!--<li>-->
+				<a href="{{ path('noticias_index') }}">
+					Regresar
+				<!--</a>-->
+			</li>
+		</ul>
+	</div>
+</div>
+{% endblock %}
