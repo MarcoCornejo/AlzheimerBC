@@ -25,6 +25,7 @@ class UsuarioType extends AbstractType
             ->add('nivel_ID')
             ->add('grupo_ID')
             ->add('foto', 'file', array('required' => false))
+            ->add('roles')
             ->add('guardar', 'submit')
         ;
     }

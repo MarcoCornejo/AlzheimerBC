@@ -1,0 +1,31 @@
+{% extends '::frontend.html.twig' %}
+
+{% block body %}
+
+<div class="row">
+  <div class="small-4 large-4 columns"><h1>Bienvenido</h1></div>
+</div>
+
+
+<div class="row">
+	<div class="large-6 columns">
+		<ul class="breadcrumbs">
+		  <li><a href="{{ path('admin') }}">Administraci&oacute;n</a></li>
+		  <li><a href="{{ path('noticias_index') }}">Crear Noticia</a></li>
+		  <li><a href="{{ path('eventos_index') }}">Crear Evento</a></li>		  
+		</ul>
+
+
+	</div>
+
+
+</div>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+
+
+{% endblock %}

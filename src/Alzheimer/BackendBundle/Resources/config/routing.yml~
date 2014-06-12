@@ -1,0 +1,8 @@
+admin:
+    pattern:  /admin
+    defaults: { _controller: BackendBundle:Index:index }
+
+_admin:
+    pattern: /admin/
+    defaults: { _controller: FrameworkBundle:Redirect:redirect, route: admin}
+

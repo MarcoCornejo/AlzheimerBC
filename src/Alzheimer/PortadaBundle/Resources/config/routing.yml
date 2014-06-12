@@ -83,15 +83,6 @@ contacto:
 #    pattern:  /login
 #    defaults: { _controller: PortadaBundle:Login:index }
 
-login:
-    pattern: /admin/login
-    defaults: { _controller: UserBundle:Security:login }
- 
-login_check:
-    pattern: admin/login_check
- 
-logout:
-    pattern: /logout
 
 
 # *********************************************************************
@@ -99,47 +90,47 @@ logout:
 
 # *********************************************************************
 usuario_index:
-    pattern:  /usuario
+    pattern:  /admin/usuario
     defaults: { _controller: UsuarioBundle:Usuario:index }
 
 _usuario_index:
-    pattern:  /usuario/
+    pattern:  /admin/usuario/
     defaults: { _controller: UsuarioBundle:Usuario:index }
 
 usuario_new:
-    pattern:  /usuario/new
+    pattern:  /admin/usuario/new
     defaults: { _controller: UsuarioBundle:Usuario:new }
 
 _usuario_new:
-    pattern:  /usuario/new/
+    pattern:  /admin/usuario/new/
     defaults: { _controller: UsuarioBundle:Usuario:new }
 
 usuario_delete:
-    pattern:  /usuario/delete/{id}
+    pattern:  /admin/usuario/delete/{id}
     defaults: { _controller: UsuarioBundle:Usuario:delete }
 
 _usuario_delete:
-    pattern:  /usuario/delete/{id}/
+    pattern:  /admin/usuario/delete/{id}/
     defaults: { _controller: UsuarioBundle:Usuario:delete }
 
 usuario_edit:
-    pattern:  /usuario/edit/{id}
+    pattern:  /admin/usuario/edit/{id}
     defaults: { _controller: UsuarioBundle:Usuario:edit }
 
 _usuario_edit:
-    pattern:  /usuario/edit/{id}/
+    pattern:  /admin/usuario/edit/{id}/
     defaults: { _controller: UsuarioBundle:Usuario:edit }
 
 usuario_show:
-    pattern:  /usuario/show/{id}
+    pattern:  /admin/usuario/show/{id}
     defaults: { _controller: UsuarioBundle:Usuario:show }
 
 _usuario_edit:
-    pattern:  /usuario/show/{id}/
+    pattern:  /admin/usuario/show/{id}/
     defaults: { _controller: UsuarioBundle:Usuario:show }
 
 usuario_update:
-    pattern:  /usuario/update/{id}
+    pattern:  /admin/usuario/update/{id}
     defaults: { _controller: UsuarioBundle:Usuario:update }
 
 # *********************************************************************

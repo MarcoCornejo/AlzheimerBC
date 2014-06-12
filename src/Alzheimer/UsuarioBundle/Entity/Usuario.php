@@ -5,6 +5,7 @@ namespace Alzheimer\UsuarioBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * Usuario
@@ -12,7 +13,7 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
  * @ORM\Table(name="Usuario")
  * @ORM\Entity()
  */
-class Usuario
+class Usuario implements UserInterface
 {
     /**
      * @var integer
@@ -95,6 +96,37 @@ class Usuario
      * @Assert\Image(maxSize = "500k", maxWidth = 300, maxHeight = 300)
      */
     protected $foto;
+
+     /**
+     * @var string
+     *
+     * @ORM\Column(name="salt", type="string", length=255)
+     */
+    private $salt;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="Rol")
+     * @ORM\JoinTable(
+     *  name="usuario_rol",
+     *  joinColumns={@ORM\JoinColumn(name="usuario_id", referencedColumnName="id")},
+     *  inverseJoinColumns={@ORM\JoinColumn(name="rol_id", referencedColumnName="id")}
+     * )
+     */
+    protected $roles;
+
+    
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->roles = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    function eraseCredentials() {}
+
+
+
 
     /**
      * Get id
@@ -370,9 +402,67 @@ class Usuario
         $this->setRutaFoto($nombreArchivoFoto);
     }
 
-    public function __toString()
+    /**
+     * Set salt
+     *
+     * @param string $salt
+     * @return Usuario
+     */
+    public function setSalt($salt)
     {
-        return $this->getNombre();
+        $this->salt = $salt;
+    
+        return $this;
+    }
+
+
+
+
+    /**
+     * Get salt
+     *
+     * @return string 
+     */
+    public function getSalt()
+    {
+        return $this->salt;
+    }
+
+    /**
+     * Add roles
+     *
+     * @param \Alzheimer\UsuarioBundle\Entity\Rol $roles
+     * @return Usuario
+     */
+    public function addRole(\Alzheimer\UsuarioBundle\Entity\Rol $roles)
+    {
+        $this->roles[] = $roles;
+    
+        return $this;
+    }
+
+    /**
+     * Remove roles
+     *
+     * @param \Alzheimer\UsuarioBundle\Entity\Rol $roles
+     */
+    public function removeRole(\Alzheimer\UsuarioBundle\Entity\Rol $roles)
+    {
+        $this->roles->removeElement($roles);
+    }
+
+    /**
+     * Get roles
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getRoles()
+    {
+        return $this->roles->toArray();
+    }
+
+    public function setRoles($roles) {
+        $this->user_roles = $roles;
     }
 
 }

@@ -17,4 +17,17 @@ nivel:
 
 noticias:
     resource: "@NoticiasBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix:   /admin
+
+
+
+admin_login:
+    pattern: /admin/login
+    defaults: { _controller: BackendBundle:Security:login }
+ 
+admin_login_check:
+    pattern: /admin/login_check
+ 
+admin_logout:
+    pattern: /admin/logout
+

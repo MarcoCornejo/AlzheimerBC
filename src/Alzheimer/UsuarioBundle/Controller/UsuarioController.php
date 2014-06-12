@@ -51,6 +51,17 @@ class UsuarioController extends Controller
         $form->handleRequest($this->getRequest());
 
         if ($form->isValid()) {
+
+            $entity->setSalt(md5(time()));
+
+            $encoder = $this->get('security.encoder_factory')->getEncoder($entity);
+            $passwordCodificado = $encoder->encodePassword(
+                $entity->getPassword(),
+                $entity->getSalt()
+            );
+            $entity->setPassword($passwordCodificado);
+
+
             $entity->subirFoto($this->container->getParameter('usuarios.imagenes'));
             $em = $this->getDoctrine()->getManager();
             $em->persist($entity);
@@ -113,10 +124,22 @@ class UsuarioController extends Controller
         $form->handleRequest($this->getRequest());
 
        if ($form->isValid()) {
+
+            $entity->setSalt(md5(time()));
+
+            $encoder = $this->get('security.encoder_factory')->getEncoder($entity);
+            $passwordCodificado = $encoder->encodePassword(
+                $entity->getPassword(),
+                $entity->getSalt()
+            );
+            $entity->setPassword($passwordCodificado);
+
+
+
             $entity->subirFoto($this->container->getParameter('usuarios.imagenes'));
             $em->flush();
 
-            return $this->redirect($this->generateUrl('usuarios_index'));
+            return $this->redirect($this->generateUrl('usuario_index'));
         }
       
         return array('entity' => $entity, 'form' => $form->createView());     

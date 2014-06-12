@@ -83,80 +83,9 @@ contacto:
 #    pattern:  /login
 #    defaults: { _controller: PortadaBundle:Login:index }
 
-login:
-    pattern: /admin/login
-    defaults: { _controller: UserBundle:Security:login }
- 
-login_check:
-    pattern: admin/login_check
- 
-logout:
-    pattern: /logout
 
 
 # *********************************************************************
-
-user_index:
-    pattern:  /user
-    defaults: { _controller: UserBundle:User:index }
-
-_user_index:
-    pattern:  /user/
-    defaults: { _controller: UserBundle:User:index }
-
-user_new:
-    pattern:  /user/new
-    defaults: { _controller: UserBundle:User:new }
-
-_usuario_new:
-    pattern:  /usuario/new/
-    defaults: { _controller: UsuarioBundle:Usuario:new }
-
-usuario_delete:
-    pattern:  /usuario/delete/{id}
-    defaults: { _controller: UsuarioBundle:Usuario:delete }
-
-_usuario_delete:
-    pattern:  /usuario/delete/{id}/
-    defaults: { _controller: UsuarioBundle:Usuario:delete }
-
-usuario_edit:
-    pattern:  /usuario/edit/{id}
-    defaults: { _controller: UsuarioBundle:Usuario:edit }
-
-_usuario_edit:
-    pattern:  /usuario/edit/{id}/
-    defaults: { _controller: UsuarioBundle:Usuario:edit }
-
-user_show:
-    pattern:  /user/show/{id}
-    defaults: { _controller: UserBundle:User:show }
-
-_usuario_edit:
-    pattern:  /usuario/show/{id}/
-    defaults: { _controller: UsuarioBundle:Usuario:show }
-
-usuario_update:
-    pattern:  /usuario/update/{id}
-    defaults: { _controller: UsuarioBundle:Usuario:update }
-
-
-
-role_index:
-    pattern:  /role
-    defaults: { _controller: UserBundle:Role:index }
-
-role_new:
-    pattern:  /role/new
-    defaults: { _controller: UserBundle:Role:new }
-
-
-
-
-
-
-
-
 
 
 # *********************************************************************

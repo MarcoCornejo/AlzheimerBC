@@ -3,7 +3,7 @@
 {% block body -%}
 
 <div class="row">
-	<div class="large-12 columns">
+	<div class="large-5 columns">
 		<h1>Creaci&oacute;n de Usuarios</h1>
 		<fieldset>
             <legend>Usuario</legend>
@@ -28,7 +28,10 @@
                 {{ form_label(form.nivel_ID, 'Nivel') }}
                 {{ form_widget(form.nivel_ID) }}
                 {{ form_label(form.grupo_ID, 'Grupo') }}
-                {{ form_widget(form.grupo_ID) }} <br><br>
+                {{ form_widget(form.grupo_ID) }}
+                {{ form_label(form.roles, 'roles') }}
+                {{ form_widget(form.roles) }}
+                 <br><br>
             {{ form_end(form) }}
         </fieldset>
 		<ul class="record_actions">

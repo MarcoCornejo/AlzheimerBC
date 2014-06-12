@@ -1,0 +1,37 @@
+{% extends '::frontend.html.twig' %}
+
+
+
+{% block body %}
+<div class="row">  
+    <div class="small-6 medium-centered columns">
+        <h2>Inicio de sesion</h2>
+        <fieldset>
+            <form action="{{ path('admin_login_check') }}" method="post" class="forms forms-columnar">
+                <p>
+                    <label for="username">Usuario:</label>
+                    <input type="text" id="username" name="_username" value="{{ last_username }}" class="width-100" />
+                </p>
+
+                <p>
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" name="_password" class="width-100" /> 
+                    <input type="hidden" name="_target_path" value="/admin" />
+                </p>
+
+                <p>
+                    <button type="submit">Entrar</button>
+                </p>
+            </form>
+            <p>
+                {% if error %}
+                <div class="error">{{ error.message|trans({},'messages') }}</div>
+                {% endif %}
+            </p>
+        </fieldset>
+    </div>    
+</div>
+
+{% endblock %}
+
+

@@ -3,7 +3,7 @@
 {% block body -%}
 
 <div class="row">
-	<div class="large-12 columns">
+	<div class="large-5 columns">
 		<h1>Creaci&oacute;n de Usuarios</h1>
 		<fieldset>
             <legend>Usuario</legend>
@@ -32,11 +32,11 @@
             {{ form_end(form) }}
         </fieldset>
 		<ul class="record_actions">
-			<li>
+			
 				<a href="{{ path('usuario_index') }}">
 					Regresar
 				</a>
-			</li>
+			
 		</ul>
 	</div>
 </div>
