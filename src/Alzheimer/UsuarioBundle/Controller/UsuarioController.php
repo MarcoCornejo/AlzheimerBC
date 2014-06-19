@@ -61,8 +61,8 @@ class UsuarioController extends Controller
             );
             $entity->setPassword($passwordCodificado);
 
-
             $entity->subirFoto($this->container->getParameter('usuarios.imagenes'));
+
             $em = $this->getDoctrine()->getManager();
             $em->persist($entity);
             $em->flush();
@@ -133,9 +133,6 @@ class UsuarioController extends Controller
                 $entity->getSalt()
             );
             $entity->setPassword($passwordCodificado);
-
-
-
             $entity->subirFoto($this->container->getParameter('usuarios.imagenes'));
             $em->flush();
 

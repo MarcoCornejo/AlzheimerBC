@@ -134,55 +134,6 @@ usuario_update:
     defaults: { _controller: UsuarioBundle:Usuario:update }
 
 # *********************************************************************
-nivel_index:
-    pattern:  /nivel
-    defaults: { _controller: NivelBundle:Nivel:index }
-
-_nivel_index:
-    pattern:  /nivel/
-    defaults: { _controller: NivelBundle:Nivel:index }
-
-nivel_new:
-    pattern:  /nivel/new
-    defaults: { _controller: NivelBundle:Nivel:new }
-
-_nivel_new:
-    pattern:  /nivel/new/
-    defaults: { _controller: NivelBundle:Nivel:new }
-
-nivel_delete:
-    pattern:  /nivel/delete/{id}
-    defaults: { _controller: NivelBundle:Nivel:delete }
-
-_nivel_delete:
-    pattern:  /nivel/delete/{id}/
-    defaults: { _controller: NivelBundle:Nivel:delete }
-
-nivel_edit:
-    pattern:  /nivel/edit/{id}
-    defaults: { _controller: NivelBundle:Nivel:edit }
-
-_nivel_edit:
-    pattern:  /nivel/edit/{id}/
-    defaults: { _controller: NivelBundle:Nivel:edit }
-
-nivel_show:
-    pattern:  /nivel/show/{id}
-    defaults: { _controller: NivelBundle:Nivel:show }
-
-_nivel_edit:
-    pattern:  /nivel/show/{id}/
-    defaults: { _controller: NivelBundle:Nivel:show }
-
-nivel_create:
-    pattern:  /nivel/create
-    defaults: { _controller: NivelBundle:Nivel:create }
-
-nivel_update:
-    pattern:  /nivel/update/{id}
-    defaults: { _controller: NivelBundle:Nivel:update }
-
-# *********************************************************************
 grupo_index:
     pattern:  /grupo
     defaults: { _controller: GrupoBundle:Grupo:index }
@@ -234,51 +185,51 @@ grupo_update:
 #*********************noticias***********************
 
 noticias_index:
-    pattern:  /noticias
+    pattern:  /admin/noticias
     defaults: { _controller: NoticiasBundle:Noticias:index }
 
 _noticias_index:
-    pattern:  /noticias/
+    pattern:  /admin/noticias/
     defaults: { _controller: NoticiasBundle:Noticias:index }
 
 noticias_new:
-    pattern:  /noticias/new
+    pattern:  /admin/noticias/new
     defaults: { _controller: NoticiasBundle:Noticias:new }
 
 _noticias_new:
-    pattern:  /noticias/new/
+    pattern:  /admin/noticias/new/
     defaults: { _controller: NoticiasBundle:Noticias:new }
 
 noticias_delete:
-    pattern:  /noticias/delete/{id}
+    pattern:  /admin/noticias/delete/{id}
     defaults: { _controller: NoticiasBundle:Noticias:delete }
 
 _noticias_delete:
-    pattern:  /noticias/delete/{id}/
+    pattern:  /admin/noticias/delete/{id}/
     defaults: { _controller: NoticiasBundle:Noticias:delete }
 
 noticias_edit:
-    pattern:  /noticias/edit/{id}
+    pattern:  /admin/noticias/edit/{id}
     defaults: { _controller: NoticiasBundle:Noticias:edit }
 
 _noticias_edit:
-    pattern:  /noticias/edit/{id}/
+    pattern:  /admin/noticias/edit/{id}/
     defaults: { _controller: NoticiasBundle:Noticias:edit }
 
 noticias_show:
-    pattern:  /noticias/show/{id}
+    pattern:  /admin/noticias/show/{id}
     defaults: { _controller: NoticiasBundle:Noticias:show }
 
 _noticias_edit:
-    pattern:  /noticias/show/{id}/
+    pattern:  /admin/noticias/show/{id}/
     defaults: { _controller: NoticiasBundle:Noticias:show }
 
 noticias_create:
-    pattern:  /noticias/create
+    pattern:  /admin/noticias/create
     defaults: { _controller: NoticiasBundle:Noticias:create }
 
 noticias_update:
-    pattern:  /noticias/update/{id}
+    pattern:  /admin/noticias/update/{id}
     defaults: { _controller: NoticiasBundle:Noticias:update }
 
 noticias_publicas:

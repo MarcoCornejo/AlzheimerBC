@@ -1,3 +1,7 @@
+backend:
+    resource: "@BackendBundle/Resources/config/routing.yml"
+    prefix:   /
+
 usuario:
     resource: "@UsuarioBundle/Resources/config/routing.yml"
     prefix:   /
@@ -11,23 +15,17 @@ grupo:
     resource: "@GrupoBundle/Resources/config/routing.yml"
     prefix:   /
 
-nivel:
-    resource: "@NivelBundle/Resources/config/routing.yml"
-    prefix:   /
-
 noticias:
     resource: "@NoticiasBundle/Resources/config/routing.yml"
     prefix:   /admin
 
-
-
 admin_login:
-    pattern: /admin/login
+    path:     /admin/login
     defaults: { _controller: BackendBundle:Security:login }
- 
+
 admin_login_check:
-    pattern: /admin/login_check
- 
+    path: /admin/login_check
+
 admin_logout:
     pattern: /admin/logout
 

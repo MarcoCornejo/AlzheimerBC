@@ -2,66 +2,59 @@
 
 {% block body -%}
 <div class="row">
-    <div class="large-12 columns">
+    <div class="large-13 columns">
         <h1>Lista de Usuarios</h1>
-        <table class="records_list">
+        <table class="records_list" style="text-align:center";>
             <thead>
                 <tr>
                     <th>Id</th>
-                    <th>Username</th>
                     <th>Nombre</th>
                     <th>Apellidos</th>
-                    <!--<th>Apellido Materno</th>-->
-                    <th>Correo</th>                    
+                    <th>Correo</th> 
                     <th>Foto</th>
                     <th>Contacto</th>
-                    <th>Nivel</th> 
-                    <th>Grupo</th>
-                    <th>Acciones</th>                    
-                    
+                    <th>Grupo</th>         
+                    <th>Acciones</th>    
                 </tr>
             </thead>
             <tbody>
                 {% for entity in entities %}
                 <tr>
                     <td><a href="{{ path('usuario_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
-                    <td>{{ entity.username }}</td>
                     <td>{{ entity.nombre }}</td>
                     <td>{{ entity.apaterno ~ " " ~ entity.amaterno}}</td>                    
-                    <td>{{ entity.correo }}</td>  
+                    <td>{{ entity.email }}</td>
                     <td>
-			 <a href="{{ path('usuario_show',{ 'id': entity.id }) }}">
-			{% if entity.rutaFoto%}
+                       <a href="{{ path('usuario_show',{ 'id': entity.id }) }}">
+                        {% if entity.rutaFoto%}
                         <img src="{{ asset('uploads/images/usuarios/') ~ entity.rutaFoto }}" />
-			{% else %}
-			<img src="{{ asset('uploads/images/usuarios/image-notfound.jpg') }}" />
+                        {% else %}
+                        <img src="{{ asset('uploads/images/usuarios/image-notfound.jpg') }}" />
                         {% endif %}
-			</a>    
-                    </td>              
-                    <td>{{ entity.contacto }}</td>
-                    <td>{{ entity.nivelID }}</td>
-                    <td>{{ entity.grupoID }}</td>
-                    <td>
-                        <ul>
-                            
-                                <a href="{{ path('usuario_show', { 'id': entity.id }) }}">Mostrar</a>
-                            
-                           
-                                <a href="{{ path('usuario_edit', { 'id': entity.id }) }}">Editar</a>
-                            
-                        </ul>
-                    </td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-        <ul>
-            
-                <a href="{{ path('usuario_new') }}">
-                    Crear Usuario
-                </a>
-            
-        </ul>
-    </div>
+                    </a>    
+                </td> 
+                <td>{{ entity.contacto }}</td>
+                <td>{{ entity.grupoID }}</td>   
+                <td>
+                    <ul>
+
+                        <a href="{{ path('usuario_show', { 'id': entity.id }) }}">Mostrar</a>
+
+
+                        <a href="{{ path('usuario_edit', { 'id': entity.id }) }}">Editar</a>
+
+                    </ul>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <ul>
+        <a href="{{ path('usuario_new') }}">
+            Crear Usuario
+        </a><br>
+        <a href="{{ path('admin') }}">Regresar a administraci&oacute;n</a>
+    </ul>
+</div>
 </div>
 {% endblock %}

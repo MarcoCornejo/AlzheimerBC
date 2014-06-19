@@ -3,15 +3,15 @@
 namespace Alzheimer\UsuarioBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Validator\Constraints as Assert;
-use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Usuario
  *
- * @ORM\Table(name="Usuario")
- * @ORM\Entity()
+ * @ORM\Table(name="usuarios")
+ * @ORM\Entity
  */
 class Usuario implements UserInterface
 {
@@ -25,12 +25,6 @@ class Usuario implements UserInterface
     private $id;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Alzheimer\NivelBundle\Entity\Nivel")
-     * @ORM\JoinColumn(name="nivel_ID", referencedColumnName="id")
-     */
-    private $nivel_ID;
-
-    /**
      * @ORM\ManyToOne(targetEntity="Alzheimer\GrupoBundle\Entity\Grupo")
      * @ORM\JoinColumn(name="grupo_ID", referencedColumnName="id")
      */
@@ -39,14 +33,7 @@ class Usuario implements UserInterface
     /**
      * @var string
      *
-     * @ORM\Column(name="username", type="string", length=20)
-     */
-    private $username;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="nombre", type="string", length=45)
+     * @ORM\Column(name="nombre", type="string", length=80)
      */
     private $nombre;
 
@@ -64,22 +51,22 @@ class Usuario implements UserInterface
      */
     private $a_materno;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="correo", type="string", length=50)
-     */
-    private $correo;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="password", type="string", length=15)
+     * @ORM\Column(name="email", type="string", length=100)
+     */
+    private $email;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="password", type="string", length=100)
      */
     private $password;
 
-
-    /**
+     /**
      * @var string
      *
      * @ORM\Column(name="contacto", type="text")
@@ -97,7 +84,8 @@ class Usuario implements UserInterface
      */
     protected $foto;
 
-     /**
+
+    /**
      * @var string
      *
      * @ORM\Column(name="salt", type="string", length=255)
@@ -114,6 +102,7 @@ class Usuario implements UserInterface
      */
     protected $roles;
 
+
     
     /**
      * Constructor
@@ -125,9 +114,11 @@ class Usuario implements UserInterface
 
     function eraseCredentials() {}
 
-
-
-
+    function getUsername()
+    {
+        return $this->getEmail();
+    }
+    
     /**
      * Get id
      *
@@ -139,38 +130,15 @@ class Usuario implements UserInterface
     }
 
     /**
-     * Set username
-     *
-     * @param string $username
-     * @return Usuarios
-     */
-    public function setUsername($username)
-    {
-        $this->username = $username;
-
-        return $this;
-    }
-
-    /**
-     * Get username
-     *
-     * @return string 
-     */
-    public function getUsername()
-    {
-        return $this->username;
-    }
-
-    /**
      * Set nombre
      *
      * @param string $nombre
-     * @return Usuarios
+     * @return Usuario
      */
     public function setNombre($nombre)
     {
         $this->nombre = $nombre;
-
+    
         return $this;
     }
 
@@ -231,26 +199,26 @@ class Usuario implements UserInterface
     }
 
     /**
-     * Set correo
+     * Set email
      *
-     * @param string $correo
-     * @return Usuarios
+     * @param string $email
+     * @return Usuario
      */
-    public function setCorreo($correo)
+    public function setEmail($email)
     {
-        $this->correo = $correo;
-
+        $this->email = $email;
+    
         return $this;
     }
 
     /**
-     * Get correo
+     * Get email
      *
      * @return string 
      */
-    public function getCorreo()
+    public function getEmail()
     {
-        return $this->correo;
+        return $this->email;
     }
 
     /**
@@ -262,7 +230,7 @@ class Usuario implements UserInterface
     public function setPassword($password)
     {
         $this->password = $password;
-
+    
         return $this;
     }
 
@@ -275,8 +243,6 @@ class Usuario implements UserInterface
     {
         return $this->password;
     }
-
-
 
     /**
      * Set contacto
@@ -301,28 +267,7 @@ class Usuario implements UserInterface
         return $this->contacto;
     }
 
-    /**
-     * Set nivel_ID
-     *
-     * @param  \Alzheimer\NivelBundle\Entity\Nivel
-     * @return Nivel
-     */
-    public function setNivelID(\Alzheimer\NivelBundle\Entity\Nivel $nivelID)
-    {
-        $this->nivel_ID = $nivelID;
-    }
-
-    /**
-     * Get nivel_ID
-     *
-     * @return \Alzheimer\NivelBundle\Entity\Nivel
-     */
-    public function getNivelID()
-    {
-        return $this->nivel_ID;
-    }
-
-    /**
+     /**
      * Set grupo_ID
      *
      * @param  \Azlheimer\GrupoBundle\Entity\Grupo
@@ -402,6 +347,9 @@ class Usuario implements UserInterface
         $this->setRutaFoto($nombreArchivoFoto);
     }
 
+
+
+
     /**
      * Set salt
      *
@@ -414,9 +362,6 @@ class Usuario implements UserInterface
     
         return $this;
     }
-
-
-
 
     /**
      * Get salt
@@ -464,5 +409,4 @@ class Usuario implements UserInterface
     public function setRoles($roles) {
         $this->user_roles = $roles;
     }
-
 }

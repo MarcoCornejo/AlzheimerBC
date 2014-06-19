@@ -10,10 +10,10 @@
 <div class="row">
 	<div class="large-6 columns">
 		<ul class="breadcrumbs">
-		  <li><a href="{{ path('admin') }}">Administraci&oacute;n</a></li>
-	       
+		  
+	        {% if is_granted('ROLE_ADMIN') %}
 		  <li><a href="{{ path('usuario_index') }}">Usuarios</a></li>
-		
+		{% endif %}
 		  <li><a href="{{ path('noticias_index') }}">Crear Noticia</a></li>
 		  <li><a href="#">Crear Evento</a></li>		
 		  <li><a href="{{ path('admin_logout') }}">Cerrar Sesi&oacute;n</a></li>  

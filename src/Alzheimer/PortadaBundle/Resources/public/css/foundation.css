@@ -3001,12 +3001,17 @@ h6,
 pre,
 form,
 p,
-blockquote,
-th,
-td {
+blockquote{  
   text-decoration: none;
   margin: 0;
   padding: 0; }
+
+th,
+tr,
+thead{
+  text-align: center;
+}
+
 
 /* Default Link Styles */
 a {
@@ -4610,7 +4615,7 @@ table {
       font-size: 0.875rem;
       font-weight: bold;
       color: #222222;
-      text-align: left; }
+      text-align: center; }
   table tr th,
   table tr td {
     padding: 0.5625rem 0.625rem;

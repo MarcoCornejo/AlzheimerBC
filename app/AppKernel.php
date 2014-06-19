@@ -17,12 +17,10 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new Alzheimer\PortadaBundle\PortadaBundle(),
-            new Alzheimer\NivelBundle\NivelBundle(),
             new Alzheimer\GrupoBundle\GrupoBundle(),
             new Alzheimer\UsuarioBundle\UsuarioBundle(),
-
-	    new Alzheimer\NoticiasBundle\NoticiasBundle(),
-	    new Alzheimer\BackendBundle\BackendBundle(),
+	        new Alzheimer\NoticiasBundle\NoticiasBundle(),
+	        new Alzheimer\BackendBundle\BackendBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
