@@ -236,4 +236,62 @@ noticias_publicas:
     pattern:  /noticias_publicas
     defaults: { _controller: NoticiasBundle:NoticiasPublicas:index }
 
+#*********************eventos***********************
+
+eventos_index:
+    pattern:  /admin/eventos
+    defaults: { _controller: EventosBundle:Eventos:index }
+
+_eventos_index:
+    pattern:  /admin/eventos/
+    defaults: { _controller: EventosBundle:Eventos:index }
+
+eventos_new:
+    pattern:  /admin/eventos/new
+    defaults: { _controller: EventosBundle:Eventos:new }
+
+_eventos_new:
+    pattern:  /admin/eventos/new/
+    defaults: { _controller: EventosBundle:Eventos:new }
+
+eventos_delete:
+    pattern:  /admin/eventos/delete/{id}
+    defaults: { _controller: EventosBundle:Eventos:delete }
+
+_eventos_delete:
+    pattern:  /admin/eventos/delete/{id}/
+    defaults: { _controller: EventosBundle:Eventos:delete }
+
+eventos_edit:
+    pattern:  /admin/eventos/edit/{id}
+    defaults: { _controller: EventosBundle:Eventos:edit }
+
+_eventos_edit:
+    pattern:  /admin/eventos/edit/{id}/
+    defaults: { _controller: EventosBundle:Eventos:edit }
+
+eventos_show:
+    pattern:  /admin/eventos/show/{id}
+    defaults: { _controller: EventosBundle:Eventos:show }
+
+_eventos_edit:
+    pattern:  /admin/eventos/show/{id}/
+    defaults: { _controller: EventosBundle:Eventos:show }
+
+eventos_create:
+    pattern:  /admin/eventos/create
+    defaults: { _controller: EventosBundle:Eventos:create }
+
+eventos_update:
+    pattern:  /admin/eventos/update/{id}
+    defaults: { _controller: EventosBundle:Eventos:update }
+
+eventos_publicos:
+    pattern:  /eventos_publicos
+    defaults: { _controller: EventosBundle:EventosPublicos:index }
+
+
+eventos_pasados:
+    pattern:  /eventos_pasados
+    defaults: { _controller: EventosBundle:EventosPasados:index }
 

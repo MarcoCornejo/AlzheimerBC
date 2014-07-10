@@ -185,52 +185,106 @@ grupo_update:
 #*********************noticias***********************
 
 noticias_index:
-    pattern:  /administracion/noticias
+    pattern:  /admin/noticias
     defaults: { _controller: NoticiasBundle:Noticias:index }
 
 _noticias_index:
-    pattern:  /administracion/noticias/
+    pattern:  /admin/noticias/
     defaults: { _controller: NoticiasBundle:Noticias:index }
 
 noticias_new:
-    pattern:  /administracion/noticias/new
+    pattern:  /admin/noticias/new
     defaults: { _controller: NoticiasBundle:Noticias:new }
 
 _noticias_new:
-    pattern:  /administracion/noticias/new/
+    pattern:  /admin/noticias/new/
     defaults: { _controller: NoticiasBundle:Noticias:new }
 
 noticias_delete:
-    pattern:  /administracion/noticias/delete/{id}
+    pattern:  /admin/noticias/delete/{id}
     defaults: { _controller: NoticiasBundle:Noticias:delete }
 
 _noticias_delete:
-    pattern:  /administracion/noticias/delete/{id}/
+    pattern:  /admin/noticias/delete/{id}/
     defaults: { _controller: NoticiasBundle:Noticias:delete }
 
 noticias_edit:
-    pattern:  /administracion/noticias/edit/{id}
+    pattern:  /admin/noticias/edit/{id}
     defaults: { _controller: NoticiasBundle:Noticias:edit }
 
 _noticias_edit:
-    pattern:  /administracion/noticias/edit/{id}/
+    pattern:  /admin/noticias/edit/{id}/
     defaults: { _controller: NoticiasBundle:Noticias:edit }
 
 noticias_show:
-    pattern:  /administracion/noticias/show/{id}
+    pattern:  /admin/noticias/show/{id}
     defaults: { _controller: NoticiasBundle:Noticias:show }
 
 _noticias_edit:
-    pattern:  /administracion/noticias/show/{id}/
+    pattern:  /admin/noticias/show/{id}/
     defaults: { _controller: NoticiasBundle:Noticias:show }
 
 noticias_create:
-    pattern:  /administracion/noticias/create
+    pattern:  /admin/noticias/create
     defaults: { _controller: NoticiasBundle:Noticias:create }
 
 noticias_update:
-    pattern:  /administracion/noticias/update/{id}
+    pattern:  /admin/noticias/update/{id}
     defaults: { _controller: NoticiasBundle:Noticias:update }
+
+noticias_publicas:
+    pattern:  /noticias_publicas
+    defaults: { _controller: NoticiasBundle:NoticiasPublicas:index }
+
+#*********************eventos***********************
+
+eventos_index:
+    pattern:  /admin/eventos
+    defaults: { _controller: EventosBundle:Eventos:index }
+
+_eventos_index:
+    pattern:  /admin/eventos/
+    defaults: { _controller: EventosBundle:Eventos:index }
+
+eventos_new:
+    pattern:  /admin/eventos/new
+    defaults: { _controller: EventosBundle:Eventos:new }
+
+_eventos_new:
+    pattern:  /admin/eventos/new/
+    defaults: { _controller: EventosBundle:Eventos:new }
+
+eventos_delete:
+    pattern:  /admin/eventos/delete/{id}
+    defaults: { _controller: EventosBundle:Eventos:delete }
+
+_eventos_delete:
+    pattern:  /admin/eventos/delete/{id}/
+    defaults: { _controller: EventosBundle:Eventos:delete }
+
+eventos_edit:
+    pattern:  /admin/eventos/edit/{id}
+    defaults: { _controller: EventosBundle:Eventos:edit }
+
+_eventos_edit:
+    pattern:  /admin/eventos/edit/{id}/
+    defaults: { _controller: EventosBundle:Eventos:edit }
+
+eventos_show:
+    pattern:  /admin/eventos/show/{id}
+    defaults: { _controller: EventosBundle:Eventos:show }
+
+_eventos_edit:
+    pattern:  /admin/eventos/show/{id}/
+    defaults: { _controller: EventosBundle:Eventos:show }
+
+eventos_create:
+    pattern:  /admin/eventos/create
+    defaults: { _controller: EventosBundle:Eventos:create }
+
+eventos_update:
+    pattern:  /admin/eventos/update/{id}
+    defaults: { _controller: EventosBundle:Eventos:update }
 
 noticias_publicas:
     pattern:  /noticias_publicas

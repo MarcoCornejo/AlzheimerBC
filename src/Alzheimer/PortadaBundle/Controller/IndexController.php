@@ -8,6 +8,10 @@ class IndexController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('PortadaBundle:Index:index.html.twig');
+    	$em = $this->getDoctrine()->getManager();
+    	 $banner=$em->getRepository('EventosBundle:Eventos')->ImagenBanner();
+
+        return $this->render('PortadaBundle:Index:index.html.twig', array('banner'=>$banner));
+
     }
 }

@@ -2,65 +2,18 @@
 
 {% block body %}
 
+<!--Banner-->
 <div class="row">
   <div class="large-12 columns">
-    <ul class="orbit-container" data-orbit>
-      <li>
-        <img src="{{ asset('bundles/portada/img/Slides/alzh1.jpg') }}" alt="slide 1" />
-        <div class="orbit-caption">
-          Image Number 1.
-        </div>
-      </li>
-      <li>
-        <img src="{{ asset('bundles/portada/img/Slides/alzh2.jpg') }}" alt="slide 2" />
-        <div class="orbit-caption">
-          Image Number 2.
-        </div>
-      </li>
-      <li>
-        <img src="{{ asset('bundles/portada/img/Slides/alzh3.jpg') }}" alt="slide 3" />
-        <div class="orbit-caption">
-          Image Number 3.
-        </div>
-      </li>
-      <li>
-        <img src="{{ asset('bundles/portada/img/Slides/alzh4.jpg') }}" alt="slide 4" />
-        <div class="orbit-caption">
-          Image Number 4.
-        </div>
-      </li>
-      <li>
-        <img src="{{ asset('bundles/portada/img/Slides/alzh5.jpg') }}" alt="slide 5" />
-        <div class="orbit-caption">
-          Image Number 5.
-        </div>
-      </li>
-      <li>
-        <img src="{{ asset('bundles/portada/img/Slides/alzh6.jpg') }}" alt="slide 6" />
-        <div class="orbit-caption">
-          Image Number 6.
-        </div>
-      </li>
-      <li>
-        <img src="{{ asset('bundles/portada/img/Slides/alzh7.jpg') }}" alt="slide 7" />
-        <div class="orbit-caption">
-          Image Number 7.
-        </div>
-      </li>
-      <li>
-        <img src="{{ asset('bundles/portada/img/Slides/alzh8.jpg') }}" alt="slide 8" />
-        <div class="orbit-caption">
-          Image Number 8.
-        </div>
-      </li>
-      <li>
-        <img src="{{ asset('bundles/portada/img/Slides/alzh9.jpg') }}" alt="slide 9" />
-        <div class="orbit-caption">
-          Image Number 9.
-        </div>
-      </li>
-    </ul>
-  </div>
+    <ul id="banner" data-orbit>
+      {% for imagen in banner%}
+      <li><a href="{{ path('eventos_publicos') }}"><img src="{{asset('uploads/images/eventos/' ~ imagen.imagenSec)}}">              
+        <div class="orbit-caption" ><b>{{imagen.titulo}}</b></div>
+      </a>                
+    </li>
+    {% endfor %}    
+  </ul>
+</div>
 </div>
 
 <div class="row">

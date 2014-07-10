@@ -21,3 +21,13 @@ li a{
     text-decoration:none;
 
 }
+
+#banner{
+	width:1000px;
+	height:500px;
+	background-color:white
+}
+
+#noticias ul,li{	
+	list-style: none;
+}

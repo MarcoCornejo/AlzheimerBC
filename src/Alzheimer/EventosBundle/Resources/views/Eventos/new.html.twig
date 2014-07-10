@@ -1,0 +1,43 @@
+{% extends '::frontend.html.twig' %}
+
+{% block body -%}
+
+<div class="row">
+	<div class="large-7 columns">
+    <h1>Creaci&oacute;n de Eventos</h1>
+		<fieldset>
+            <legend>Eventos</legend>
+            {{ form_start(form, { 'action': path('eventos_new'), 'method': 'POST' }) }} 
+                {{ form_label(form.titulo, 'Titulo') }}
+                {{ form_widget(form.titulo) }}
+                 {{ form_label(form.descripcion, 'Descripcion breve de la Noticia') }}
+                {{ form_widget(form.descripcion) }}
+                {{ form_label(form.cuerpo, 'Cuerpo') }}
+                {{ form_widget(form.cuerpo) }}
+                {{ form_label(form.lugar, 'Lugar') }}
+                {{ form_widget(form.lugar) }}
+                {{ form_label(form.fechaPub, 'Fecha de Publicacion') }}
+                {{ form_widget(form.fechaPub) }}
+                {{ form_label(form.fechaFin, 'Fecha de Terminacion') }}
+                {{ form_widget(form.fechaFin) }}                
+                {{ form_label(form.fechaCrea, 'Fecha de Creacion') }}
+                {{ form_widget(form.fechaCrea) }} 
+                {{ form_label(form.imagenPrim, 'Imagen Principal')}}
+                {{ form_widget(form.imagenPrim) }}
+                {{ form_errors(form.imagenPrim) }}
+                {{ form_label(form.imagenSec, 'Imagen Secundaria')}}
+                {{ form_widget(form.imagenSec) }}
+                {{ form_errors(form.imagenSec) }}
+                 <br><br>
+            {{ form_end(form) }}
+        </fieldset>
+		<ul class="record_actions">
+			<!--<li>-->
+				<a href="{{ path('eventos_index') }}">
+					Regresar
+				<!--</a>-->
+			</li>
+		</ul>
+</div>
+</div>
+{% endblock %}

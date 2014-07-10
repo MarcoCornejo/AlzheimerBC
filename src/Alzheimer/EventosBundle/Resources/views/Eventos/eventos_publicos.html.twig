@@ -1,0 +1,76 @@
+{% extends '::frontend.html.twig' %}
+
+{% block body -%}
+
+
+<div class="row">
+	<div class="small-2 large-4 columns">
+		<h2>Eventos</h2><br><br>
+	</div><br><br><br>			
+</div>
+<!--Eventos Recientes-->
+<div class="row">
+		<div class="panel panel-body">
+			<div id="noticia">
+				<ul >
+					{% for entity in entities %}
+					<li>			
+						<div class="row">					
+							<div class="small-7 columns">
+								<a href="#" data-reveal-id="modal{{ entity.id }}">
+									{% if entity.imagenPrim %}        
+									<img src="{{ asset('uploads/images/eventos/' ~ entity.imagenPrim) }}" alt=""  />      
+									{% else %}
+									<img src="{{ asset('uploads/images/eventos/image-notfound.jpg') }}" alt="" />            
+									{% endif %}
+								</a>
+
+							</div>
+							<div class="small-5 columns">					
+								<p class="lead"><a href="#" data-reveal-id="modal{{ entity.id }}">{{ entity.titulo }}</a>
+								</p><hr />
+								<p class="lead">	
+									{{ entity.fechaPub|date("d \\-\\ m  \\-\\ Y")}}<br>	
+									{{entity.descripcion}}
+								</p>
+								<a onclick="vermas()"data-reveal-id="modal{{ entity.id }}">ver mas...</a>					
+							</div>
+						</div><hr>
+						
+
+						<!--Contenido del Modal -->
+						<div id="modal{{ entity.id }}" class="reveal-modal large" data-reveal>
+							<div class="row">
+								<div class="large-4 columns">
+									{% if entity.imagenPrim %}
+									<img src="{{ asset('uploads/images/eventos/' ~ entity.imagenPrim) }}" alt=""  />      
+									{% else %}
+									<img src="{{ asset('uploads/images/eventos/image-notfound.jpg') }}" alt=""/>
+									{% endif %} 
+								</div>
+								<div class="large-8 columns">
+									<p class="lead">{{ entity.titulo }}</p>	<hr>
+									<h5>Dia del Evento:</h5>						
+									<p>{{ entity.fechaPub|date("d \\-\\ F  \\-\\ Y") }}</p>
+									<p>{{ entity.cuerpo }}</p>
+									<h5>Lugar:</h5>
+									<p>{{ entity.lugar}}</p>
+									{% if entity.imagenSec %}
+									<img src="{{ asset('uploads/images/eventos/' ~ entity.imagenSec) }}" alt=""/>
+									{% else %}
+									<img src="{{ asset('uploads/images/eventos/image-notfound.jpg') }}" alt=""/>
+									{% endif %} 
+								</div>
+							</div>
+							<a class="close-reveal-modal">&#215;</a>
+						</div>					
+					</li>		
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+</div>
+
+<br><br><br><br><br><br><br>
+
+{% endblock %}

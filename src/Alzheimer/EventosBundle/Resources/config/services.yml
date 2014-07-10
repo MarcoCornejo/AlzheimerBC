@@ -1,0 +1,7 @@
+parameters:
+#    eventos.example.class: Alzheimer\EventosBundle\Example
+
+services:
+#    eventos.example:
+#        class: %eventos.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

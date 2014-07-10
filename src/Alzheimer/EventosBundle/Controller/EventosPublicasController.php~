@@ -1,0 +1,40 @@
+<?php
+
+namespace Alzheimer\EventosBundle\Controller;
+
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+use Alzheimer\EventosBundle\Entity\Eventos;
+use Alzheimer\EventosBundle\Form\EventosType;
+
+/**
+ * EventosPublicas controller.
+ *
+ * @Route("/eventos_publico")
+ */
+class EventosPublicasController extends Controller
+{
+
+    /**
+     * Lists all Eventos entities.
+     *
+     * @Route("/", name="eventos")
+     * @Method("GET")
+     * @Template()
+     */
+    public function indexAction()
+    {
+        $em = $this->getDoctrine()->getEntityManager();
+
+        $entities = $em->getRepository('EventosBundle:Eventos')->findBy(array(),array('fecha'=>'DESC'));
+	 
+        
+        return $this->render('EventosBundle:Eventos:eventos_publico.html.twig', array('entities' => $entities));
+        
+     }
+    
+
+}

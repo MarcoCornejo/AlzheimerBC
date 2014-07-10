@@ -1,6 +1,10 @@
+eventos:
+    resource: "@EventosBundle/Resources/config/routing.yml"
+    prefix:   /
+
 backend:
     resource: "@BackendBundle/Resources/config/routing.yml"
-    prefix:   /admin
+    prefix:   /
 
 usuario:
     resource: "@UsuarioBundle/Resources/config/routing.yml"

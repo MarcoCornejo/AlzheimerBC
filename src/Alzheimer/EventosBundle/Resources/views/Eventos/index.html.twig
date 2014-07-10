@@ -1,0 +1,79 @@
+{% extends '::frontend.html.twig' %}
+
+{% block body -%}
+<div class="row">
+    <div class="large-12 columns">
+        <h1>Lista de Eventos</h1>
+
+        <table class="records_list">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Titulo</th>
+                    <th>Descripcion</th>
+                    <th>Cuerpo</th>
+                    <th>Lugar</th>
+                    <th>Fecha de Publicacion</th>
+                    <th>Fecha Final</th>
+                    <th>Fecha de Creacion</th>
+                 <!--   <th>Imagen Principal</th>
+                    <th>Imagen Secundaria</th>-->
+                    <th>Actiones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for entity in entities %}
+                <tr>
+                    <td><a href="{{ path('eventos_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                    <td>{{ entity.titulo }}</td>
+                    <td>{{ entity.descripcion}}</td>
+                    <td>{{ entity.cuerpo }}</td>
+                    <td>{{ entity.lugar }}</td>
+                    <td>{% if entity.fechaPub %}{{ entity.fechaPub|date('d-m-Y') }}{% endif %}</td>
+                    <td>{% if entity.fechaFin %}{{ entity.fechaFin|date('d-m-Y') }}{% endif %}</td>
+                    <td>{% if entity.fechaCrea %}{{ entity.fechaCrea|date('d-m-Y') }}{% endif %}</td>
+                <!--     <td>
+                        <a href="{{ path('eventos_show',{ 'id': entity.id }) }}">
+                        {% if entity.imagenPrim%}
+                                    <img src="{{ asset('uploads/images/eventos/') ~ entity.imagenPrim }}" />
+                        {% else %}
+                        <img src="{{ asset('uploads/images/usuarios/image-notfound.jpg') }}" />
+                        {% endif %}
+                        </a> 
+                    </td>
+                    <td>
+                        <a href="{{ path('eventos_show',{ 'id': entity.id }) }}">
+                        {% if entity.imagenSec%}
+                                    <img src="{{ asset('uploads/images/eventos/') ~ entity.imagenSec }}" />
+                        {% else %}
+                        <img src="{{ asset('uploads/images/usuarios/image-notfound.jpg') }}" />
+                        {% endif %}
+                        </a>
+                    </td>-->
+                    <td
+                        <ul>
+                            
+                                <a href="{{ path('eventos_show', { 'id': entity.id }) }}">Mostrar</a><br>
+                            
+                            
+                                <a href="{{ path('eventos_edit', { 'id': entity.id }) }}">Editar</a>
+                            
+                        </ul>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <ul>
+
+            <a href="{{ path('eventos_new') }}">
+                Crear Evento
+            </a><br>
+            <a href="{{ path('admin') }}">Regresar a administraci&oacute;n</a>
+
+        </ul>
+    </div>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+{% endblock %}

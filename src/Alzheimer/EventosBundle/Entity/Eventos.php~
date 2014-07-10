@@ -1,0 +1,244 @@
+<?php
+
+namespace Alzheimer\EventosBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Eventos
+ *
+ * @ORM\Table()
+ * @ORM\Entity
+ */
+class Eventos
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="titulo", type="string", length=40)
+     */
+    private $titulo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="cuerpo", type="string", length=255)
+     */
+    private $cuerpo;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechaPub", type="date")
+     */
+    private $fechaPub;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechaFin", type="date")
+     */
+    private $fechaFin;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fechaCrea", type="date")
+     */
+    private $fechaCrea;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="imagenPrim", type="string", length=255)
+     */
+    private $imagenPrim;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="imagenSec", type="string", length=255)
+     */
+    private $imagenSec;
+
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set titulo
+     *
+     * @param string $titulo
+     * @return Eventos
+     */
+    public function setTitulo($titulo)
+    {
+        $this->titulo = $titulo;
+
+        return $this;
+    }
+
+    /**
+     * Get titulo
+     *
+     * @return string 
+     */
+    public function getTitulo()
+    {
+        return $this->titulo;
+    }
+
+    /**
+     * Set cuerpo
+     *
+     * @param string $cuerpo
+     * @return Eventos
+     */
+    public function setCuerpo($cuerpo)
+    {
+        $this->cuerpo = $cuerpo;
+
+        return $this;
+    }
+
+    /**
+     * Get cuerpo
+     *
+     * @return string 
+     */
+    public function getCuerpo()
+    {
+        return $this->cuerpo;
+    }
+
+    /**
+     * Set fechaPub
+     *
+     * @param \DateTime $fechaPub
+     * @return Eventos
+     */
+    public function setFechaPub($fechaPub)
+    {
+        $this->fechaPub = $fechaPub;
+
+        return $this;
+    }
+
+    /**
+     * Get fechaPub
+     *
+     * @return \DateTime 
+     */
+    public function getFechaPub()
+    {
+        return $this->fechaPub;
+    }
+
+    /**
+     * Set fechaFin
+     *
+     * @param \DateTime $fechaFin
+     * @return Eventos
+     */
+    public function setFechaFin($fechaFin)
+    {
+        $this->fechaFin = $fechaFin;
+
+        return $this;
+    }
+
+    /**
+     * Get fechaFin
+     *
+     * @return \DateTime 
+     */
+    public function getFechaFin()
+    {
+        return $this->fechaFin;
+    }
+
+    /**
+     * Set fechaCrea
+     *
+     * @param \DateTime $fechaCrea
+     * @return Eventos
+     */
+    public function setFechaCrea($fechaCrea)
+    {
+        $this->fechaCrea = $fechaCrea;
+
+        return $this;
+    }
+
+    /**
+     * Get fechaCrea
+     *
+     * @return \DateTime 
+     */
+    public function getFechaCrea()
+    {
+        return $this->fechaCrea;
+    }
+
+    /**
+     * Set imagenPrim
+     *
+     * @param string $imagenPrim
+     * @return Eventos
+     */
+    public function setImagenPrim($imagenPrim)
+    {
+        $this->imagenPrim = $imagenPrim;
+
+        return $this;
+    }
+
+    /**
+     * Get imagenPrim
+     *
+     * @return string 
+     */
+    public function getImagenPrim()
+    {
+        return $this->imagenPrim;
+    }
+
+    /**
+     * Set imagenSec
+     *
+     * @param string $imagenSec
+     * @return Eventos
+     */
+    public function setImagenSec($imagenSec)
+    {
+        $this->imagenSec = $imagenSec;
+
+        return $this;
+    }
+
+    /**
+     * Get imagenSec
+     *
+     * @return string 
+     */
+    public function getImagenSec()
+    {
+        return $this->imagenSec;
+    }
+}

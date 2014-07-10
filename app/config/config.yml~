@@ -56,6 +56,10 @@ doctrine:
     orm:
         auto_generate_proxy_classes: "%kernel.debug%"
         auto_mapping: true
+    
+    dql:
+       numeric_functions:
+            test_numeric: alzheimer\EventosBundle\DQL\NumericFunction
 
 # Swiftmailer Configuration
 swiftmailer:
@@ -67,3 +71,5 @@ swiftmailer:
 
 parameters:
     usuarios.imagenes: %kernel.root_dir%/../web/uploads/images/usuarios
+    noticias.imagenes: %kernel.root_dir%/../web/uploads/images/noticias
+    eventos.imagenes: %kernel.root_dir%/../web/uploads/images/eventos

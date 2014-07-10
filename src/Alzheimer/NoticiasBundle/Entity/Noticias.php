@@ -36,7 +36,7 @@ class Noticias
     /**
      * @var string
      *
-     * @ORM\Column(name="cuerpo", type="string", length=255)
+     * @ORM\Column(name="cuerpo", type="text")
      */
     private $cuerpo;
 
