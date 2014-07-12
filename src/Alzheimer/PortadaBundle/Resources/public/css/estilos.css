@@ -31,3 +31,7 @@ li a{
 #noticias ul,li{	
 	list-style: none;
 }
+
+.back a{
+	color: #14863E;
+}

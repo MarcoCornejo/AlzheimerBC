@@ -13,7 +13,9 @@
 		<div class="panel panel-body">
 			<div id="noticia">
 				<ul >
-					{% for entity in entities %}
+					{% if entities %}
+
+					{% for entity in entities %}									
 					<li>			
 						<div class="row">					
 							<div class="small-7 columns">
@@ -36,7 +38,7 @@
 								<a onclick="vermas()"data-reveal-id="modal{{ entity.id }}">ver mas...</a>					
 							</div>
 						</div><hr>
-						
+					
 
 						<!--Contenido del Modal -->
 						<div id="modal{{ entity.id }}" class="reveal-modal large" data-reveal>
@@ -64,8 +66,11 @@
 							</div>
 							<a class="close-reveal-modal">&#215;</a>
 						</div>					
-					</li>		
+					</li>	
 					{% endfor %}
+					{% else%}
+					<h3>Sin  Eventos</h3>
+					{% endif %}
 				</ul>
 			</div>
 		</div>

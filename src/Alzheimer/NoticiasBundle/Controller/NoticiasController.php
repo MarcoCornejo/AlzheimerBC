@@ -30,10 +30,10 @@ class NoticiasController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $entities = $em->getRepository('NoticiasBundle:Noticias')->findAll();
+        $paginador=$this->get('knp_paginator');
+        $paginar=$paginador->paginate($entities, $this->getRequest()->query->get('page',1),3);
 
-        return array(
-            'entities' => $entities,
-        );
+        return array('entities' => $paginar);
     }
     /**
      * Creates a new Noticias entity.

@@ -64,6 +64,7 @@
 			    <ul class="dropdown">
 			      <li><a href="{{ path('noticias_publicas') }}">Noticias</a></li>
 			      <li><a href="{{ path('eventos_publicos') }}">Eventos</a></li>
+			       <li><a href="{{ path('eventos_pasados') }}">Eventos Pasados</a></li>
 			    </ul>
 			  </li>
 
@@ -83,11 +84,11 @@
 	<!-- Logo -->
 	<div class="row">
 	<br>
-		<!--<div class="large-12 columns">
+		<div class="large-12 columns">
 			<a href="#">
 				<img src="{{ asset('bundles/portada/img/logo.png') }}">
 			</a>
-		</div>-->
+		</div>
 	</div>
 
 	<!-- Separator -->
@@ -128,12 +129,14 @@
 	<link rel="stylesheet" href="{{ asset('bundles/portada/css/foundation.css') }}" />
 	<link rel="stylesheet" href="{{ asset('bundles/portada/css/normalize.css') }}" />
 	<link rel="stylesheet" href="{{ asset('bundles/portada/css/estilos.css') }}" />
-	<link rel="stylesheet" href="{{ asset('bundles/portada/css/kube.css') }}" />
+	<link rel="stylesheet" href="{{ asset('bundles/portada/css/bootstrap-theme.css') }}" />
+	
 {% endblock %}
 
 {% block javascripts %}
 	<script src="{{ asset('bundles/portada/js/vendor/jquery.js') }}"></script>
 	<script src="{{ asset('bundles/portada/js/foundation.min.js') }}"></script>
+	<script src="{{ asset('bundles/portada/js/opciones.js') }}"></script>
 	<script>
 	$(document).foundation({
 		orbit: {

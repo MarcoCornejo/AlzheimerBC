@@ -32,9 +32,10 @@ class EventosController extends Controller
 
         $entities = $em->getRepository('EventosBundle:Eventos')->findAll();
 
-        return array(
-            'entities' => $entities,
-        );
+        $paginador=$this->get('knp_paginator');
+        $paginar=$paginador->paginate($entities, $this->getRequest()->query->get('page',1),3);
+
+        return array('entities' => $paginar );
     }
     /**
      * Creates a new Eventos entity.

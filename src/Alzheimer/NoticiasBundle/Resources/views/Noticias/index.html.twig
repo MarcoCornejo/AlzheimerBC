@@ -10,8 +10,8 @@
                 <tr>
                     <th>Id</th>
                     <th>Titulo</th>
-                    <th>Cuerpo</th>
-                    <th>Fecha</th>
+                    <th width="300">Cuerpo</th>
+                    <th width="100">Fecha</th>
                     <th>1ra Imagen</th>
                     <th>2da Imagen</th>
                     <th>Actiones</th>
@@ -43,6 +43,7 @@
         </table>
 
         <ul>
+            {{ knp_pagination_render(entities) }}
             <!--<li>-->
                 <a href="{{ path('noticias_new') }}">
                     Nueva Noticia
