@@ -7,26 +7,27 @@
     <h1>Creaci&oacute;n de Eventos</h1>
 		<fieldset>
             <legend>Eventos</legend>
-            {{ form_start(form, { 'action': path('eventos_new'), 'method': 'POST' }) }} 
+            {{ form_start(form, { 'action': path('eventos_new'), 'method': 'POST', 'attr': {'enctype': 'multipart/form-data', 'class': 'forms forms-inline'} }) }} 
+
                 {{ form_label(form.titulo, 'Titulo') }}
-                {{ form_widget(form.titulo) }}
-                 {{ form_label(form.descripcion, 'Descripcion breve de la Noticia') }}
-                {{ form_widget(form.descripcion) }}
+                {{ form_widget(form.titulo, { 'attr': {'class': 'width-100'} }) }}
+                {{ form_label(form.descripcion, 'Descripcion breve de la Noticia') }}
+                {{ form_widget(form.descripcion, { 'attr': {'class': 'width-100'} }) }}
                 {{ form_label(form.cuerpo, 'Cuerpo') }}
-                {{ form_widget(form.cuerpo) }}
+                {{ form_widget(form.cuerpo, { 'attr': {'class': 'width-100'} }) }}
                 {{ form_label(form.lugar, 'Lugar') }}
-                {{ form_widget(form.lugar) }}
+                {{ form_widget(form.lugar, { 'attr': {'class': 'width-100'} }) }}
                 {{ form_label(form.fechaPub, 'Fecha de Publicacion') }}
-                {{ form_widget(form.fechaPub) }}
+                {{ form_widget(form.fechaPub, { 'attr': {'class': 'width-100'} }) }}
                 {{ form_label(form.fechaFin, 'Fecha de Terminacion') }}
-                {{ form_widget(form.fechaFin) }}                
+                {{ form_widget(form.fechaFin, { 'attr': {'class': 'width-100'} }) }}                
                 {{ form_label(form.fechaCrea, 'Fecha de Creacion') }}
-                {{ form_widget(form.fechaCrea) }} 
+                {{ form_widget(form.fechaCrea, { 'attr': {'class': 'width-100'} }) }} 
                 {{ form_label(form.imagenPrim, 'Imagen Principal')}}
-                {{ form_widget(form.imagenPrim) }}
+                {{ form_widget(form.imagenPrim, { 'attr': {'class': 'width-100'} }) }}
                 {{ form_errors(form.imagenPrim) }}
                 {{ form_label(form.imagenSec, 'Imagen Secundaria')}}
-                {{ form_widget(form.imagenSec) }}
+                {{ form_widget(form.imagenSec, { 'attr': {'class': 'width-100'} }) }}
                 {{ form_errors(form.imagenSec) }}
                  <br><br>
             {{ form_end(form) }}
