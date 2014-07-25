@@ -22,8 +22,8 @@ class EventosType extends AbstractType
             ->add('fechaPub','date',array('widget' => 'single_text'))
             ->add('fechaFin','date',array('widget' => 'single_text'))
             ->add('fechaCrea','date',array('widget' => 'single_text'))
-            ->add('imagenPrim','file',array('required' => false))
-            ->add('imagenSec','file',array('required' => false))
+            ->add('imagenPrim','file',array('data_class' => null))
+            ->add('imagenSec','file',array('data_class' => null))
             ->add('guardar', 'submit')
         ;
     }

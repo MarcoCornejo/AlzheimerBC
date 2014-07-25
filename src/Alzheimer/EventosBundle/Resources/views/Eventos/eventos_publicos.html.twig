@@ -18,17 +18,17 @@
 					{% for entity in entities %}									
 					<li>			
 						<div class="row">					
-							<div class="small-7 columns">
+							<div class="small-6 columns">
 								<a href="#" data-reveal-id="modal{{ entity.id }}">
 									{% if entity.imagenPrim %}        
-									<img src="{{ asset('uploads/images/eventos/' ~ entity.imagenPrim) }}" alt=""  />      
+									<img class="portada" src="{{ asset('uploads/images/eventos/' ~ entity.imagenPrim) }}" alt=""  />      
 									{% else %}
-									<img src="{{ asset('uploads/images/eventos/image-notfound.jpg') }}" alt="" />            
+									<img class="portada" src="{{ asset('uploads/images/eventos/image-notfound.jpg') }}" alt="" />            
 									{% endif %}
 								</a>
 
 							</div>
-							<div class="small-5 columns">					
+							<div class="small-6 columns">					
 								<p class="lead"><a href="#" data-reveal-id="modal{{ entity.id }}">{{ entity.titulo }}</a>
 								</p><hr />
 								<p class="lead">	
@@ -45,22 +45,23 @@
 							<div class="row">
 								<div class="large-4 columns">
 									{% if entity.imagenPrim %}
-									<img src="{{ asset('uploads/images/eventos/' ~ entity.imagenPrim) }}" alt=""  />      
+									<img class="prim" src="{{ asset('uploads/images/eventos/' ~ entity.imagenPrim) }}" alt=""  />      
 									{% else %}
-									<img src="{{ asset('uploads/images/eventos/image-notfound.jpg') }}" alt=""/>
+									<img class="prim" src="{{ asset('uploads/images/eventos/image-notfound.jpg') }}" alt=""/>
 									{% endif %} 
 								</div>
 								<div class="large-8 columns">
 									<p class="lead">{{ entity.titulo }}</p>	<hr>
 									<h5>Dia del Evento:</h5>						
 									<p>{{ entity.fechaPub|date("d \\-\\ F  \\-\\ Y") }}</p>
-									<p>{{ entity.cuerpo }}</p>
+									<p>{{ entity.cuerpo | nl2br
+ }}</p>
 									<h5>Lugar:</h5>
 									<p>{{ entity.lugar}}</p>
 									{% if entity.imagenSec %}
-									<img src="{{ asset('uploads/images/eventos/' ~ entity.imagenSec) }}" alt=""/>
+									<img class="sec" src="{{ asset('uploads/images/eventos/' ~ entity.imagenSec) }}" alt=""/>
 									{% else %}
-									<img src="{{ asset('uploads/images/eventos/image-notfound.jpg') }}" alt=""/>
+									<img class="sec" src="{{ asset('uploads/images/eventos/image-notfound.jpg') }}" alt=""/>
 									{% endif %} 
 								</div>
 							</div>

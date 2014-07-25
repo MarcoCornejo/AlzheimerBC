@@ -7,7 +7,13 @@
   <div class="large-12 columns">
     <ul id="banner" data-orbit>
       {% for imagen in banner%}
-      <li><a href="{{ path('eventos_publicos') }}"><img src="{{asset('uploads/images/eventos/' ~ imagen.imagenSec)}}">              
+
+      {% if imagen.imagenSec %} 
+      <li><a href="{{ path('eventos_publicos') }}"><img src="{{asset('uploads/images/eventos/' ~ imagen.imagenSec )}}">        
+      {% else %}
+        <a href="{{ path('eventos_publicos') }}"><img src="{{asset('uploads/images/eventos/' ~ imagen.imagenPrim)}}">
+      {% endif %}
+
         <div class="orbit-caption" ><b>{{imagen.titulo}}</b></div>
       </a>                
     </li>

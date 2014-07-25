@@ -295,3 +295,7 @@ eventos_pasados:
     pattern:  /eventos_pasados
     defaults: { _controller: EventosBundle:EventosPasados:index }
 
+creacion_eventos:
+    pattern:  /admin/creacion_eventos
+    defaults: { _controller: EventosBundle:Eventos:creacion }
+

@@ -18,8 +18,8 @@ class NoticiasType extends AbstractType
             ->add('titulo')
             ->add('cuerpo','textarea')
             ->add('fecha','date',array('widget' => 'single_text'))
-            ->add('imagenPrim','file',array('required' => false))
-            ->add('imagenSec','file', array('required' => false))
+            ->add('imagenPrim','file',array('data_class'=>null))
+            ->add('imagenSec','file', array('data_class'=>null))
 	    ->add('guardar', 'submit')
         ;
     }

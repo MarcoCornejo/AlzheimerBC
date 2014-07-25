@@ -24,8 +24,13 @@ li a{
 
 #banner{
 	width:1000px;
-	height:500px;
+	height:400px;
 	background-color:white
+}
+
+#banner img{
+	width:1000px;
+	height:400px;
 }
 
 #noticias ul,li{	
@@ -34,4 +39,19 @@ li a{
 
 .back a{
 	color: #14863E;
+}
+
+.portada{
+	width: 450px;
+	height:250px;
+}
+
+.prim{
+	width: 350px;
+	height:220px;
+}
+
+.sec{
+	width: 550px;
+	height:500px;	
 }

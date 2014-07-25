@@ -2,7 +2,6 @@
 
 namespace Alzheimer\EventosBundle\Controller;
 
-
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
@@ -28,9 +27,9 @@ class EventosController extends Controller
      */
     public function indexAction()
     {
-        $em = $this->getDoctrine()->getManager();
+        $em = $this->getDoctrine()->getEntityManager();
 
-        $entities = $em->getRepository('EventosBundle:Eventos')->findAll();
+        $entities = $em->getRepository('EventosBundle:Eventos')->findBy(array(),array('fechaCrea'=>'DESC'));
 
         $paginador=$this->get('knp_paginator');
         $paginar=$paginador->paginate($entities, $this->getRequest()->query->get('page',1),3);
@@ -162,6 +161,7 @@ class EventosController extends Controller
 
        if ($form->isValid()) {
             $entity->subirFoto($this->container->getParameter('eventos.imagenes'));
+            $entity->subirFoto2($this->container->getParameter('eventos.imagenes'));
             $em->flush();
 
             return $this->redirect($this->generateUrl('eventos_index'));
@@ -263,5 +263,11 @@ class EventosController extends Controller
             ->add('submit', 'submit', array('label' => 'Eliminar'))
             ->getForm()
         ;
+    }
+
+
+    public function creacionAction(){
+
+        return $this->render('EventosBundle:Eventos:creacion.html.twig');
     }
 }

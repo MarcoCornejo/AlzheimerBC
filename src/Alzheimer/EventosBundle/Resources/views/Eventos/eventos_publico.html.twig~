@@ -30,7 +30,7 @@
 						<div class="large-8 columns">
 							<p class="lead">{{ entity.titulo }}</p>							
 							<p>{{ entity.fechaPub|date("d \\-\\ F  \\-\\ Y", "America/Tijuana") }}</p>
-							<p>{{ entity.cuerpo }}</p>
+							<p>{{ entity.cuerpo|nl2br }}</p>
 							{% if entity.imagenSec %}
 							<img src="{{ asset('uploads/images/eventos/' ~ entity.imagenSec) }}" alt=""/>
 							{% else %}

@@ -27,9 +27,9 @@ class NoticiasController extends Controller
      */
     public function indexAction()
     {
-        $em = $this->getDoctrine()->getManager();
+        $em = $this->getDoctrine()->getEntityManager();
 
-        $entities = $em->getRepository('NoticiasBundle:Noticias')->findAll();
+        $entities = $em->getRepository('NoticiasBundle:Noticias')->findBy(array(),array('fecha'=>'DESC'));
         $paginador=$this->get('knp_paginator');
         $paginar=$paginador->paginate($entities, $this->getRequest()->query->get('page',1),3);
 
@@ -79,7 +79,7 @@ class NoticiasController extends Controller
 
         if ($form->isValid()) {
             $entity->subirFoto($this->container->getParameter('noticias.imagenes'));
-	    $entity->subirFoto2($this->container->getParameter('noticias.imagenes'));
+	        $entity->subirFoto2($this->container->getParameter('noticias.imagenes'));
             $em = $this->getDoctrine()->getManager();
             $em->persist($entity);
             $em->flush();
@@ -143,6 +143,7 @@ class NoticiasController extends Controller
 
        if ($form->isValid()) {
             $entity->subirFoto($this->container->getParameter('noticias.imagenes'));
+            $entity->subirFoto2($this->container->getParameter('noticias.imagenes'));
             $em->flush();
 
             return $this->redirect($this->generateUrl('noticias_index'));

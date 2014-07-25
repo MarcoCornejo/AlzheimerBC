@@ -44,7 +44,7 @@ class EventosRepository extends EntityRepository
 		$em= $this ->getEntityManager();
 		$dql=$em->createQueryBuilder();
 			
-			$dql->select('i.id,i.imagenSec, i.fechaPub','i.titulo')
+			$dql->select('i.id,i.imagenPrim,i.imagenSec, i.fechaPub','i.titulo')
 			->from('EventosBundle:Eventos','i')			
 			->where('i.fechaPub<=:fecha and i.fechaFin>:fechaP')
 			->orderBy('i.fechaPub','DESC');			

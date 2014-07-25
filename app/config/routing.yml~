@@ -21,7 +21,7 @@ grupo:
 
 noticias:
     resource: "@NoticiasBundle/Resources/config/routing.yml"
-    prefix:   /admin
+    prefix:   /
 
 admin_login:
     path:     /admin/login

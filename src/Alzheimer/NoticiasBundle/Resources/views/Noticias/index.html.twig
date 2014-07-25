@@ -10,10 +10,10 @@
                 <tr>
                     <th>Id</th>
                     <th>Titulo</th>
-                    <th width="300">Cuerpo</th>
+                    <th width="500">Cuerpo</th>
                     <th width="100">Fecha</th>
-                    <th>1ra Imagen</th>
-                    <th>2da Imagen</th>
+                <!--    <th>1ra Imagen</th>
+                    <th>2da Imagen</th>-->
                     <th>Actiones</th>
                 </tr>
             </thead>
@@ -24,8 +24,8 @@
                     <td>{{ entity.titulo }}</td>
                     <td>{{ entity.cuerpo }}</td>
                     <td>{% if entity.fecha %}{{ entity.fecha|date('d-m-Y') }}{% endif %}</td>
-                    <td>{{ entity.imagenPrim }}</td>
-                    <td>{{ entity.imagenSec }}</td>
+                <!--    <td>{{ entity.imagenPrim }}</td>
+                    <td>{{ entity.imagenSec }}</td>-->
 
                     <td>
                         <ul>
@@ -54,5 +54,5 @@
 
     </div>
 </div>
-<br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br>
 {% endblock %}

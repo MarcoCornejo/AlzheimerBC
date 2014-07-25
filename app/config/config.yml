@@ -72,7 +72,7 @@ parameters:
     eventos.imagenes: %kernel.root_dir%/../web/uploads/images/eventos
 
 knp_paginator:
-    page_range: 10  # número de páginas que se muestran en el paginador
+    page_range: 50  # número de páginas que se muestran en el paginador
 
     default_options:
         # los siguientes tres parámetros permiten "traducir" el paginador
@@ -87,5 +87,20 @@ knp_paginator:
     template:
         # estas opciones configuran la plantilla utilizada para la paginación
         # y para los controles que premiten reordenar los resultados
-        pagination: KnpPaginatorBundle:Pagination:sliding.html.twig
+        pagination: KnpPaginatorBundle:Pagination:twitter_bootstrap_v3_pagination.html.twig
         sortable:   KnpPaginatorBundle:Pagination:sortable_link.html.twig
+
+
+
+avalanche_imagine:
+    source_root:  %kernel.root_dir%/../web/uploads/images/eventos
+    web_root:     %kernel.root_dir%/../web/uploads/images/eventos
+    cache_prefix: media/cache
+    driver:       gd
+    filters:
+        cga:
+            type:    resize
+            options: { size: [320, 200] }
+        wuxga:
+            type:    resize
+            options: { size: [1920, 1200] }

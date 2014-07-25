@@ -1,17 +1,21 @@
 security:
     firewalls:
         # Firewall global utilizado en la parte pública o frontend
+        frontend:
+            pattern:  ^/admin/login$
+            anonymous: ~
+
         backend:
             pattern:   ^/admin
             provider: administradores
-            anonymous: ~
+            
             form_login:
                 login_path: admin_login
                 check_path: admin_login_check
 
             logout:
                 path: admin_logout
-                target: admin_login
+                target: /
 
     role_hierarchy:
         ROLE_ADMIN: [ROLE_ADMIN, ROLE_USER]            

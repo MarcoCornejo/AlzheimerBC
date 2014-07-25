@@ -13,9 +13,10 @@
                     <th>Descripcion</th>
                     <th width="400">Cuerpo</th>
                     <th width="200">Lugar</th>
+                    <th width="200">Fecha de Creacion</th>
                     <th>Fecha de Publicacion</th>
                     <th width="200">Fecha Final</th>
-                    <th width="200">Fecha de Creacion</th>
+                    
                  <!--   <th>Imagen Principal</th>
                     <th>Imagen Secundaria</th>-->
                     <th>Actiones</th>
@@ -29,9 +30,10 @@
                     <td>{{ entity.descripcion}}</td>
                     <td>{{ entity.cuerpo }}</td>
                     <td>{{ entity.lugar }}</td>
+                    <td>{% if entity.fechaCrea %}{{ entity.fechaCrea|date('d-m-Y') }}{% endif %}</td>
                     <td>{% if entity.fechaPub %}{{ entity.fechaPub|date('d-m-Y') }}{% endif %}</td>
                     <td>{% if entity.fechaFin %}{{ entity.fechaFin|date('d-m-Y') }}{% endif %}</td>
-                    <td>{% if entity.fechaCrea %}{{ entity.fechaCrea|date('d-m-Y') }}{% endif %}</td>
+                    
                 <!--     <td>
                         <a href="{{ path('eventos_show',{ 'id': entity.id }) }}">
                         {% if entity.imagenPrim%}
@@ -71,5 +73,5 @@
         </ul>
     </div>
 </div>
-<br><br><br><br><br><br><br>
+<br>
 {% endblock %}

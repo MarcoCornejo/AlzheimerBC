@@ -15,17 +15,17 @@
 					{% for pasada in pasadas %}
 					<li>			
 						<div class="row">					
-							<div class="small-7 columns">
+							<div class="small-6 columns">
 								<a href="#" data-reveal-id="modal{{ pasada.id }}">
 									{% if pasada.imagenPrim %}        
-									<img src="{{ asset('uploads/images/eventos/' ~ pasada.imagenPrim) }}" alt=""  />      
+									<img class="portada" src="{{ asset('uploads/images/eventos/' ~ pasada.imagenPrim) }}" alt=""  />      
 									{% else %}
-									<img src="{{ asset('uploads/images/eventos/image-notfound.jpg') }}" alt="" />            
+									<img  class="portada" src="{{ asset('uploads/images/eventos/image-notfound.jpg') }}" alt="" />            
 									{% endif %}
 								</a>
 
 							</div>
-							<div class="small-5 columns">					
+							<div class="small-6 columns">					
 								<p class="lead"><a href="#" data-reveal-id="modal{{ pasada.id }}">{{ pasada.titulo }}</a>
 								</p><hr />
 								<p class="lead">	
@@ -42,7 +42,7 @@
 							<div class="row">
 								<div class="large-4 columns">
 									{% if pasada.imagenPrim %}
-									<img src="{{ asset('uploads/images/eventos/' ~ pasada.imagenPrim) }}" alt=""  />      
+									<img class="prim" src="{{ asset('uploads/images/eventos/' ~ pasada.imagenPrim) }}" alt=""  />      
 									{% else %}
 									<img src="{{ asset('uploads/images/eventos/image-notfound.jpg') }}" alt=""/>
 									{% endif %} 
@@ -51,11 +51,11 @@
 									<p class="lead">{{ pasada.titulo }}</p>	<hr>
 									<h5>Dia del Evento:</h5>						
 									<p>{{ pasada.fechaPub|date("d \\-\\ F  \\-\\ Y") }}</p>
-									<p>{{ pasada.cuerpo }}</p>
+									<p>{{ pasada.cuerpo| nl2br }}</p>
 									<h5>Lugar:</h5>
 									<p>{{ pasada.lugar}}</p>
 									{% if pasada.imagenSec %}
-									<img src="{{ asset('uploads/images/eventos/' ~ pasada.imagenSec) }}" alt=""/>
+									<img class="sec" src="{{ asset('uploads/images/eventos/' ~ pasada.imagenSec) }}" alt=""/>
 									{% else %}
 									<img src="{{ asset('uploads/images/eventos/image-notfound.jpg') }}" alt=""/>
 									{% endif %} 
@@ -63,13 +63,16 @@
 							</div>
 							<a class="close-reveal-modal">&#215;</a>
 						</div>					
-					</li>		
+					</li>	
+
 					{% endfor %}
 				</ul>
 			</div>
 		</div>
+		
+		 {{ knp_pagination_render(pasadas) }}
 </div>
 
-<br><br><br><br><br><br><br>
+<br>
 
 {% endblock %}

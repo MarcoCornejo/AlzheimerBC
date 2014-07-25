@@ -23,6 +23,7 @@ class AppKernel extends Kernel
 	        new Alzheimer\BackendBundle\BackendBundle(),
             new Alzheimer\EventosBundle\EventosBundle(),
             new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
+	     new Avalanche\Bundle\ImagineBundle\AvalancheImagineBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

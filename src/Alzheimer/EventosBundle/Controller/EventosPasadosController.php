@@ -31,8 +31,13 @@ class EventosPasadosController extends Controller
 
         $pasadas=$em->getRepository('EventosBundle:Eventos')->NoticiasPasadas();
 
+
+         $paginador=$this->get('knp_paginator');
+        $paginar=$paginador->paginate($pasadas, $this->getRequest()->query->get('page',1),4);
+
+
         return $this->render('EventosBundle:Eventos:eventos_pasados.html.twig',
-            array('pasadas'=>$pasadas));      
+            array('pasadas'=>$paginar));      
 
      }    
 

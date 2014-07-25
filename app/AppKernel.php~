@@ -22,6 +22,7 @@ class AppKernel extends Kernel
 	        new Alzheimer\NoticiasBundle\NoticiasBundle(),
 	        new Alzheimer\BackendBundle\BackendBundle(),
             new Alzheimer\EventosBundle\EventosBundle(),
+            new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

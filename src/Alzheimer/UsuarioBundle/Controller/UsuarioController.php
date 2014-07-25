@@ -7,6 +7,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+
+use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 use Alzheimer\UsuarioBundle\Entity\Usuario;
 use Alzheimer\UsuarioBundle\Form\UsuarioType;
 
@@ -235,4 +237,9 @@ class UsuarioController extends Controller
             ->getForm()
         ;
     }
+
+
+
+
+    
 }
