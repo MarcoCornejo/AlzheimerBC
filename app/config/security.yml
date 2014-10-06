@@ -5,6 +5,7 @@ security:
             pattern:  ^/admin/login$
             anonymous: ~
 
+
         backend:
             pattern:   ^/admin
             provider: administradores
@@ -18,10 +19,12 @@ security:
                 target: /
 
     role_hierarchy:
-        ROLE_ADMIN: [ROLE_ADMIN, ROLE_USER]            
+        ROLE_ADMIN: [ROLE_ADMIN]
+        ROLE_USER:  [ROLE_USER]            
 
     access_control:
         - { path: ^/, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/, roles: IS_AUTHENTICATED_FULLY }
         - { path: ^/admin/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/admin/*, roles: ROLE_USER }
         - { path: ^/admin/*, roles: ROLE_ADMIN }

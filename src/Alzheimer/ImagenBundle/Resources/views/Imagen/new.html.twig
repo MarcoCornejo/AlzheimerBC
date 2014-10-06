@@ -1,0 +1,29 @@
+{% extends '::frontend.html.twig' %}
+
+{% block body -%}
+<div class="row">
+    <div class="large-7 columns">
+    <h1>Agregar imágen</h1>
+
+    
+            {{ form_start(form, { 'action': path('imagen_new'), 'method': 'POST', 'attr': {'enctype': 'multipart/form-data', 'class': 'forms forms-inline'} }) }} 
+
+                
+                {{ form_label(form.img, 'Imagen')}}
+                {{ form_widget(form.img, { 'attr': {'class': 'width-100'} }) }}
+                {{ form_errors(form.img) }}
+                
+                 <br><br>
+            {{ form_end(form) }}
+            <br>
+    <li>
+        <a href="{{ path('imagen_index') }}">
+        Regresar
+        </a>
+    </li>
+</ul>
+<br><br><br><br><br><br><br><br><br><br>
+
+</div>
+</div>
+{% endblock %}

@@ -1,0 +1,58 @@
+{% extends '::frontend.html.twig' %}
+
+{% block body -%}
+<div class="row">
+    <div class="large-12 columns">
+    <h1>Imágenes</h1><br/>
+    <h5>Estas imágenes serán mostradas en el banner de la página de inicio </h5><br/>
+
+    <table class="records_list">
+        <thead>
+            <tr>
+                <th></th>
+                <th width="400">Imágenes</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('imagen_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td height="50">
+                    {% if entity.img%}
+                        <img src="{{ asset('uploads/images/imagen/') ~ entity.img }}" />
+                        {% else %}
+                        <img src="{{ asset('uploads/images/usuarios/image-notfound.jpg') }}" />
+                    {% endif %}
+                </td>
+               
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('imagen_show', { 'id': entity.id }) }}">mostrar</a>
+                    </li>
+                    <li>
+                        <!--<a href="{{ path('imagen_edit', { 'id': entity.id }) }}">editar</a>-->
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {{ knp_pagination_render(entities) }}
+
+        <ul>
+        <li>
+            <a href="{{ path('imagen_new') }}">
+                Agregar imágenes
+            </a>
+        </li>
+        <li>
+            <a href="{{ path('admin') }}">Regresar a administraci&oacute;n</a>
+        </li>
+    </ul>
+</div>
+</div>
+<br><br><br><br><br><br><br><br><br>
+    {% endblock %}

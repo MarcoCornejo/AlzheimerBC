@@ -254,4 +254,9 @@ class NoticiasController extends Controller
      * @@Template("NoticiasBundle:Noticias:noticias_publico.html.twig")
      */
    
+
+   public function menuAction(){
+
+    return $this->render('NoticiasBundle:Noticias:MenuNoticias.html.twig');
+   }
 }

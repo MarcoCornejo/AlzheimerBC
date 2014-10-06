@@ -33,6 +33,7 @@ class UsuarioController extends Controller
 
         $entities = $em->getRepository('UsuarioBundle:Usuario')->findAll();
 
+
         return array(
             'entities' => $entities,
         );
@@ -238,7 +239,11 @@ class UsuarioController extends Controller
         ;
     }
 
+    public function menuAction(){
 
+        return $this->render('UsuarioBundle:Usuario:MenuUsuario.html.twig');
+
+    }
 
 
     

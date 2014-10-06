@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "72ebf76de17a9d9dd7e7c781fa1d1686",
+    "hash": "d6fa94c1313384c1ed78578362ea8ae0",
     "packages": [
         {
             "name": "avalanche123/imagine-bundle",
@@ -893,12 +893,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/KnpLabs/KnpPaginatorBundle.git",
-                "reference": "d35547a771a03923d19d55ea335cd2801ad72dc2"
+                "reference": "27c2a202192a2d96fd25aaed3ec95120c1e30af5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/KnpLabs/KnpPaginatorBundle/zipball/d35547a771a03923d19d55ea335cd2801ad72dc2",
-                "reference": "d35547a771a03923d19d55ea335cd2801ad72dc2",
+                "url": "https://api.github.com/repos/KnpLabs/KnpPaginatorBundle/zipball/27c2a202192a2d96fd25aaed3ec95120c1e30af5",
+                "reference": "27c2a202192a2d96fd25aaed3ec95120c1e30af5",
                 "shasum": ""
             },
             "require": {
@@ -943,7 +943,7 @@
                 "pagination",
                 "paginator"
             ],
-            "time": "2014-07-18 12:20:39"
+            "time": "2014-08-25 23:31:20"
         },
         {
             "name": "kriswallsmith/assetic",
@@ -1124,17 +1124,17 @@
         },
         {
             "name": "sensio/distribution-bundle",
-            "version": "v2.3.4",
+            "version": "v2.3.5",
             "target-dir": "Sensio/Bundle/DistributionBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensiolabs/SensioDistributionBundle.git",
-                "reference": "66df91b4bd637a83299d8072aed3658bfd3b3021"
+                "reference": "715fcb65f9a4841ffaf40c0bf050329d74c84cad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/SensioDistributionBundle/zipball/66df91b4bd637a83299d8072aed3658bfd3b3021",
-                "reference": "66df91b4bd637a83299d8072aed3658bfd3b3021",
+                "url": "https://api.github.com/repos/sensiolabs/SensioDistributionBundle/zipball/715fcb65f9a4841ffaf40c0bf050329d74c84cad",
+                "reference": "715fcb65f9a4841ffaf40c0bf050329d74c84cad",
                 "shasum": ""
             },
             "require": {
@@ -1158,9 +1158,7 @@
             "authors": [
                 {
                     "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com",
-                    "homepage": "http://fabien.potencier.org",
-                    "role": "Lead Developer"
+                    "email": "fabien@symfony.com"
                 }
             ],
             "description": "The base bundle for the Symfony Distributions",
@@ -1168,7 +1166,7 @@
                 "configuration",
                 "distribution"
             ],
-            "time": "2013-08-22 05:04:53"
+            "time": "2014-09-03 12:25:05"
         },
         {
             "name": "sensio/framework-extra-bundle",
@@ -1388,20 +1386,21 @@
         },
         {
             "name": "symfony/icu",
-            "version": "v1.2.1",
+            "version": "v1.2.2",
             "target-dir": "Symfony/Component/Icu",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Icu.git",
-                "reference": "98e197da54df1f966dd5e8a4992135703569c987"
+                "reference": "d4d85d6055b87f394d941b45ddd3a9173e1e3d2a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Icu/zipball/98e197da54df1f966dd5e8a4992135703569c987",
-                "reference": "98e197da54df1f966dd5e8a4992135703569c987",
+                "url": "https://api.github.com/repos/symfony/Icu/zipball/d4d85d6055b87f394d941b45ddd3a9173e1e3d2a",
+                "reference": "d4d85d6055b87f394d941b45ddd3a9173e1e3d2a",
                 "shasum": ""
             },
             "require": {
+                "ext-intl": "*",
                 "lib-icu": ">=4.4",
                 "php": ">=5.3.3",
                 "symfony/intl": "~2.3"
@@ -1432,7 +1431,7 @@
                 "icu",
                 "intl"
             ],
-            "time": "2013-10-04 10:06:38"
+            "time": "2014-07-25 09:58:17"
         },
         {
             "name": "symfony/monolog-bundle",
@@ -1553,16 +1552,16 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "v2.3.18",
+            "version": "v2.3.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "75e07e6bde6391a6f49c8546a43740c80ac1b06b"
+                "reference": "1fc05758044fa1cf54460d7d4aff5f55b0f1b0db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/75e07e6bde6391a6f49c8546a43740c80ac1b06b",
-                "reference": "75e07e6bde6391a6f49c8546a43740c80ac1b06b",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/1fc05758044fa1cf54460d7d4aff5f55b0f1b0db",
+                "reference": "1fc05758044fa1cf54460d7d4aff5f55b0f1b0db",
                 "shasum": ""
             },
             "require": {
@@ -1644,14 +1643,12 @@
             ],
             "authors": [
                 {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com",
-                    "homepage": "http://fabien.potencier.org",
-                    "role": "Lead Developer"
-                },
-                {
                     "name": "Symfony Community",
                     "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
                 }
             ],
             "description": "The Symfony PHP framework",
@@ -1659,7 +1656,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2014-07-15 14:20:44"
+            "time": "2014-09-03 09:45:27"
         },
         {
             "name": "twig/extensions",
@@ -1766,6 +1763,141 @@
                 "templating"
             ],
             "time": "2014-07-05 12:19:05"
+        },
+        {
+            "name": "yepsua/jquery4php",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oyepez003/jQuery4PHP.git",
+                "reference": "8771acb5fee17e831af920a8301ea51b39d14f7c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/oyepez003/jQuery4PHP/zipball/8771acb5fee17e831af920a8301ea51b39d14f7c",
+                "reference": "8771acb5fee17e831af920a8301ea51b39d14f7c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.4"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "YepSua/Labs/RIA/jQuery4PHP/jquery4php_required.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL",
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Omar Yepez",
+                    "email": "omar.yepez@yepsua.com"
+                }
+            ],
+            "description": "Makes easy writing javascript code (jQuery syntax) using PHP objects",
+            "homepage": "http://jquery4php.sourceforge.net/",
+            "keywords": [
+                "jQuery plugins",
+                "jQuery4PHP",
+                "jQueryUI",
+                "jquery",
+                "php"
+            ],
+            "time": "2013-02-19 04:40:33"
+        },
+        {
+            "name": "yepsua/smartwig",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oyepez003/smartwig.git",
+                "reference": "5203c6fcc9666ca7eaf7fb44e65d9a7c8e7b9637"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/oyepez003/smartwig/zipball/5203c6fcc9666ca7eaf7fb44e65d9a7c8e7b9637",
+                "reference": "5203c6fcc9666ca7eaf7fb44e65d9a7c8e7b9637",
+                "shasum": ""
+            },
+            "require": {
+                "twig/twig": "~1.0",
+                "yepsua/jquery4php": "1.0.*"
+            },
+            "suggest": {
+                "symfony/config": "",
+                "symfony/dependency-injection": "",
+                "twig/extensions": "1.0.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Ultimate Components Extension for Twig.",
+            "time": "2014-01-15 15:20:34"
+        },
+        {
+            "name": "yepsua/smartwig-bundle",
+            "version": "v1.1.0",
+            "target-dir": "Yepsua/SmarTwigBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oyepez003/YepsuaSmarTwigBundle.git",
+                "reference": "55a01943641473387785922d29609392ac6bea4f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/oyepez003/YepsuaSmarTwigBundle/zipball/55a01943641473387785922d29609392ac6bea4f",
+                "reference": "55a01943641473387785922d29609392ac6bea4f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2",
+                "symfony/framework-bundle": "2.*",
+                "yepsua/jquery4php": "1.0.*",
+                "yepsua/smartwig": "1.*"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "symfony-app-dir": "app",
+                "symfony-web-dir": "web"
+            },
+            "autoload": {
+                "psr-0": {
+                    "Yepsua\\SmarTwigBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Omar Yepez",
+                    "email": "omar.yepez@yepsua.com"
+                }
+            ],
+            "description": "The jQuery, jQueryUI (and more) Symfony Bundle",
+            "homepage": "http://smartwig.yepsua.com",
+            "keywords": [
+                "RIA",
+                "extensions",
+                "jQuery4PHP",
+                "jquery",
+                "templating",
+                "twig",
+                "ui"
+            ],
+            "time": "2014-01-29 22:57:37"
         }
     ],
     "packages-dev": [
@@ -1778,6 +1910,7 @@
     "stability-flags": {
         "knplabs/knp-paginator-bundle": 20
     },
+    "prefer-stable": false,
     "platform": {
         "php": ">=5.3.3"
     },

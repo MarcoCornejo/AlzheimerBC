@@ -1,0 +1,7 @@
+parameters:
+#    imagen.example.class: Alzheimer\ImagenBundle\Example
+
+services:
+#    imagen.example:
+#        class: %imagen.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

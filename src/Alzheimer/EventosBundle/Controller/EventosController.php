@@ -270,4 +270,10 @@ class EventosController extends Controller
 
         return $this->render('EventosBundle:Eventos:creacion.html.twig');
     }
+
+    public function menuAction(){
+
+        return $this->render('EventosBundle:Eventos:MenuEvento.html.twig');
+    }
+
 }

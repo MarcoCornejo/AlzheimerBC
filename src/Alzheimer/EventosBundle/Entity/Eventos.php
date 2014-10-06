@@ -342,14 +342,10 @@ class Eventos
     {
         if (null === $this->getImagenPrim()) {
             return;
-        }
-        
+        }        
 
         $nombreArchivoFoto = $this->getImagenPrim()->getClientOriginalName();
-
         $this->getImagenPrim()->move($directorioDestino, $nombreArchivoFoto);
-
-
         $this->setImagenPrim($nombreArchivoFoto);
         
     }

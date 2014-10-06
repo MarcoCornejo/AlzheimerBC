@@ -1,0 +1,12 @@
+{% extends "YepsuaShowcaseBundle::showcaseLayout.html.twig" %}
+
+{% block title "Showcase Tab | Data Model"  %}
+
+{% block content %}        
+   
+  {% ui_upload action=path('_showcase_upload_file') filters="jpg,gif,png" %}
+    <p>You browser doesn't have Flash, Silverlight, Gears, BrowserPlus or HTML5 support.</p>
+  {% end_ui_upload %}
+
+{% endblock %}
+{% set code = sourcecode(_self) %}

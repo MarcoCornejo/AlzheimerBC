@@ -70,6 +70,7 @@ parameters:
     usuarios.imagenes: %kernel.root_dir%/../web/uploads/images/usuarios
     noticias.imagenes: %kernel.root_dir%/../web/uploads/images/noticias
     eventos.imagenes: %kernel.root_dir%/../web/uploads/images/eventos
+    imagen.imagenes: %kernel.root_dir%/../web/uploads/images/imagen
 
 knp_paginator:
     page_range: 50  # número de páginas que se muestran en el paginador

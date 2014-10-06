@@ -1,3 +1,7 @@
+imagen:
+    resource: "@ImagenBundle/Resources/config/routing.yml"
+    prefix:   /
+
 _imagine:
     resource: .
     type:     imagine

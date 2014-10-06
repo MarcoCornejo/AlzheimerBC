@@ -133,6 +133,10 @@ usuario_update:
     pattern:  /admin/usuario/update/{id}
     defaults: { _controller: UsuarioBundle:Usuario:update }
 
+menu_usuario:
+    pattern:  /admin/menu_usuario
+    defaults: { _controller:UsuarioBundle:Usuario:menu}
+
 # *********************************************************************
 grupo_index:
     pattern:  /grupo
@@ -236,6 +240,10 @@ noticias_publicas:
     pattern:  /noticias_publicas
     defaults: { _controller: NoticiasBundle:NoticiasPublicas:index }
 
+menu_noticia:
+    pattern:  /admin/menu_noticia
+    defaults: { _controller:NoticiasBundle:Noticias:menu}
+
 #*********************eventos***********************
 
 eventos_index:
@@ -298,4 +306,59 @@ eventos_pasados:
 creacion_eventos:
     pattern:  /admin/creacion_eventos
     defaults: { _controller: EventosBundle:Eventos:creacion }
+
+menu_evento:
+    pattern:  /admin/menu_evento
+    defaults: { _controller: EventosBundle:Eventos:menu }
+
+#*******************************************************************#
+
+imagen_index:
+    pattern:  /admin/imagen
+    defaults: { _controller: ImagenBundle:Imagen:index }
+
+_imagen_index:
+    pattern:  /admin/imagen/
+    defaults: { _controller: ImagenBundle:Imagen:index }
+
+imagen_new:
+    pattern:  /admin/imagen/new
+    defaults: { _controller: ImagenBundle:Imagen:new }
+
+_imagen_new:
+    pattern:  /admin/imagen/new/
+    defaults: { _controller: ImagenBundle:Imagen:new }
+
+imagen_delete:
+    pattern:  /admin/imagen/delete/{id}
+    defaults: { _controller: ImagenBundle:Imagen:delete }
+
+_imagen_delete:
+    pattern:  /admin/imagen/delete/{id}/
+    defaults: { _controller: ImagenBundle:Imagen:delete }
+
+imagen_edit:
+    pattern:  /admin/imagen/edit/{id}
+    defaults: { _controller: ImagenBundle:Imagen:edit }
+
+_imagen_edit:
+    pattern:  /admin/imagen/edit/{id}/
+    defaults: { _controller: ImagenBundle:Imagen:edit }
+
+imagen_show:
+    pattern:  /admin/imagen/show/{id}
+    defaults: { _controller: ImagenBundle:Imagen:show }
+
+_imagen_edit:
+    pattern:  /admin/imagen/show/{id}/
+    defaults: { _controller: ImagenBundle:Imagen:show }
+
+imagen_create:
+    pattern:  /admin/imagen/create
+    defaults: { _controller: ImagenBundle:Imagen:create }
+
+imagen_update:
+    pattern:  /admin/imagen/update/{id}
+    defaults: { _controller: ImagenBundle:Imagen:update }
+
 

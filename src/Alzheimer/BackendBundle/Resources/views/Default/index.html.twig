@@ -9,14 +9,18 @@
 
 
 <div class="row">
-	<div class="large-7 columns">
+	<div class="large-9 columns">
 		<ul class="breadcrumbs">
 		  <li class="back"><a href="{{ path('admin') }}">Administraci&oacute;n</a></li>
-	       
-		  <li class="back"><a href="{{ path('usuario_index') }}">Usuarios</a></li>
-		
-		  <li class="back"><a href="{{ path('noticias_index') }}">Crear Noticia</a></li>
-		  <li class="back"><a href="{{ path('eventos_index') }}">Crear Evento</a></li>		
+
+
+	     {% if is_granted('ROLE_ADMIN') %}
+		  <li class="back"><a href="{{ path('menu_usuario') }}">Usuarios</a></li>
+		  <li class="back"><a href="{{ path('menu_evento') }}">Crear Evento</a></li>
+		 {% endif %}
+
+		  <li class="back"><a href="{{ path('menu_noticia') }}">Crear Noticia</a></li>		  
+		  <li class="back"><a href="{{ path('imagen_index') }}">Cargar Imágen</a></li>		
 		  <li class="back"><a href="{{ path('admin_logout') }}">Cerrar Sesi&oacute;n</a></li>  
 		</ul>
 

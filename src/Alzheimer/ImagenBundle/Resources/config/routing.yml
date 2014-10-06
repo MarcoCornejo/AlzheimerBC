@@ -1,0 +1,3 @@
+imagen_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: ImagenBundle:Default:index }

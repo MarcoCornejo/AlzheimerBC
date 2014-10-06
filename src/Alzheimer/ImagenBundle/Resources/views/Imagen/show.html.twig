@@ -1,0 +1,48 @@
+{% extends '::frontend.html.twig' %}
+
+{% block body -%}
+
+<div class="row">
+    <div class="large-7 columns">
+
+    <h1>Mostrar imágen</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Imágen</th>
+                <td>
+                    {% if entity.img%}
+                        <img src="{{ asset('uploads/images/imagen/') ~ entity.img }}" />
+                        {% else %}
+                        <img src="{{ asset('uploads/images/usuarios/image-notfound.jpg') }}" />
+                    {% endif %}
+
+                </td>
+            </tr>
+            <tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('imagen_index') }}">
+            Regresar
+        </a>
+    </li>
+    <li>
+        <!--<a href="{{ path('imagen_edit', { 'id': entity.id }) }}">
+            Editar
+        </a>-->
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+
+</div></div>
+
+<br><br><br><br>
+{% endblock %}

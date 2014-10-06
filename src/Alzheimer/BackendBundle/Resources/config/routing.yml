@@ -6,3 +6,5 @@ _admin:
     pattern: /admin/
     defaults: { _controller: FrameworkBundle:Redirect:redirect, route: admin}
 
+
+

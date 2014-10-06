@@ -6,7 +6,7 @@
 <div class="row">
   <div class="large-12 columns">
     <ul id="banner" data-orbit>
-      {% for imagen in banner%}
+      {% for imagen in banner %}
 
       {% if imagen.imagenSec %} 
       <li><a href="{{ path('eventos_publicos') }}"><img src="{{asset('uploads/images/eventos/' ~ imagen.imagenSec )}}">        
@@ -15,9 +15,15 @@
       {% endif %}
 
         <div class="orbit-caption" ><b>{{imagen.titulo}}</b></div>
-      </a>                
+      </a>  
+
     </li>
-    {% endfor %}    
+    {% endfor %}
+
+    {% for imagenes in imagen %}
+     <a href="{{ path('eventos_publicos') }}"><img src="{{asset('uploads/images/imagen/' ~ imagenes.img )}}"></a>
+    {% endfor %}
+
   </ul>
 </div>
 </div>

@@ -10,4 +10,11 @@ class DefaultController extends Controller
     {
         return $this->render('BackendBundle:Default:index.html.twig', array('name' => $name));
     }
+
+
+    public function imagenesAction(){
+
+        return $this->render('BackendBundle:Default:imagenes.html.twig');
+
+    }  
 }

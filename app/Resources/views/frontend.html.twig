@@ -73,10 +73,17 @@
 		      </li>
 
 		     
-			  
-			  <li>
+			{% if is_granted('IS_AUTHENTICATED_FULLY') %}
+			<li><a href="{{ path('admin') }}">Administraci&oacute;n</a></li>
+
+			{%else %}
+
+				<li>
 			  	<a href="{{ path('admin_login') }}">Ingresar</a>
 			  </li>
+			{% endif %}  
+
+			  
 			  
 			</ul>
 
