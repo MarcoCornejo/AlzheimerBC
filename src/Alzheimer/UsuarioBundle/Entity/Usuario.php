@@ -1,19 +1,16 @@
 <?php
-
 namespace Alzheimer\UsuarioBundle\Entity;
-
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\Validator\Constraints as Assert;
-
 /**
  * Usuario
  *
  * @ORM\Table(name="usuarios")
  * @ORM\Entity
  */
-class Usuario implements UserInterface
+class Usuario implements UserInterface, \Serializable
 {
     /**
      * @var integer
@@ -23,75 +20,62 @@ class Usuario implements UserInterface
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     private $id;
-
     /**
      * @ORM\ManyToOne(targetEntity="Alzheimer\GrupoBundle\Entity\Grupo")
      * @ORM\JoinColumn(name="grupo_ID", referencedColumnName="id")
      */
     private $grupo_ID;
-
     /**
      * @var string
      *
      * @ORM\Column(name="nombre", type="string", length=80)
      */
     private $nombre;
-
     /**
      * @var string
      *
      * @ORM\Column(name="a_paterno", type="string", length=25)
      */
     private $a_paterno;
-
     /**
      * @var string
      *
      * @ORM\Column(name="a_materno", type="string", length=25)
      */
     private $a_materno;
-
-
     /**
      * @var string
      *
      * @ORM\Column(name="email", type="string", length=100)
      */
     private $email;
-
     /**
      * @var string
      *
      * @ORM\Column(name="password", type="string", length=100)
      */
     private $password;
-
      /**
      * @var string
      *
      * @ORM\Column(name="contacto", type="text")
      */
     private $contacto;
-
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     protected $rutaFoto;
-
     /**
      *
      * @Assert\Image(maxSize = "500k", maxWidth = 300, maxHeight = 300)
      */
     protected $foto;
-
-
     /**
      * @var string
      *
      * @ORM\Column(name="salt", type="string", length=255)
      */
     private $salt;
-
     /**
      * @ORM\ManyToMany(targetEntity="Rol")
      * @ORM\JoinTable(
@@ -101,8 +85,6 @@ class Usuario implements UserInterface
      * )
      */
     protected $roles;
-
-
     
     /**
      * Constructor
@@ -111,9 +93,7 @@ class Usuario implements UserInterface
     {
         $this->roles = new \Doctrine\Common\Collections\ArrayCollection();
     }
-
     function eraseCredentials() {}
-
     function getUsername()
     {
         return $this->getEmail();
@@ -128,7 +108,6 @@ class Usuario implements UserInterface
     {
         return $this->id;
     }
-
     /**
      * Set nombre
      *
@@ -141,7 +120,6 @@ class Usuario implements UserInterface
     
         return $this;
     }
-
     /**
      * Get nombre
      *
@@ -151,7 +129,6 @@ class Usuario implements UserInterface
     {
         return $this->nombre;
     }
-
     /**
      * Set a_paterno
      *
@@ -161,10 +138,8 @@ class Usuario implements UserInterface
     public function setAPaterno($aPaterno)
     {
         $this->a_paterno = $aPaterno;
-
         return $this;
     }
-
     /**
      * Get a_paterno
      *
@@ -174,7 +149,6 @@ class Usuario implements UserInterface
     {
         return $this->a_paterno;
     }
-
     /**
      * Set a_materno
      *
@@ -184,10 +158,8 @@ class Usuario implements UserInterface
     public function setAMaterno($aMaterno)
     {
         $this->a_materno = $aMaterno;
-
         return $this;
     }
-
     /**
      * Get a_materno
      *
@@ -197,7 +169,6 @@ class Usuario implements UserInterface
     {
         return $this->a_materno;
     }
-
     /**
      * Set email
      *
@@ -210,7 +181,6 @@ class Usuario implements UserInterface
     
         return $this;
     }
-
     /**
      * Get email
      *
@@ -220,7 +190,6 @@ class Usuario implements UserInterface
     {
         return $this->email;
     }
-
     /**
      * Set password
      *
@@ -233,7 +202,6 @@ class Usuario implements UserInterface
     
         return $this;
     }
-
     /**
      * Get password
      *
@@ -243,7 +211,6 @@ class Usuario implements UserInterface
     {
         return $this->password;
     }
-
     /**
      * Set contacto
      *
@@ -253,10 +220,8 @@ class Usuario implements UserInterface
         public function setContacto($contacto)
         {
             $this->contacto = $contacto;
-
             return $this;
         }
-
     /**
      * Get contacto
      *
@@ -266,7 +231,6 @@ class Usuario implements UserInterface
     {
         return $this->contacto;
     }
-
      /**
      * Set grupo_ID
      *
@@ -277,7 +241,6 @@ class Usuario implements UserInterface
     {
         $this->grupo_ID = $grupoID;
     }
-
     /**
      * Get grupo_ID
      *
@@ -287,7 +250,6 @@ class Usuario implements UserInterface
     {
         return $this->grupo_ID;
     }
-
         /**
      * Set rutaFoto
      *
@@ -297,7 +259,6 @@ class Usuario implements UserInterface
     {
         $this->rutaFoto = $rutaFoto;
     }
-
     /**
      * Get rutaFoto
      *
@@ -307,7 +268,6 @@ class Usuario implements UserInterface
     {
         return $this->rutaFoto;
     }
-
     /**
      * Set foto.
      *
@@ -317,7 +277,6 @@ class Usuario implements UserInterface
     {
         $this->foto = $foto;
     }
-
     /**
      * Get foto.
      *
@@ -327,7 +286,6 @@ class Usuario implements UserInterface
     {
         return $this->foto;
     }
-
     /**
      * Sube la foto de la oferta copiándola en el directorio que se indica y
      * guardando en la entidad la ruta hasta la foto
@@ -339,17 +297,10 @@ class Usuario implements UserInterface
         if (null === $this->getFoto()) {
             return;
         }
-
         $nombreArchivoFoto = $this->getFoto()->getClientOriginalName();
-
         $this->getFoto()->move($directorioDestino, $nombreArchivoFoto);
-
         $this->setRutaFoto($nombreArchivoFoto);
     }
-
-
-
-
     /**
      * Set salt
      *
@@ -362,7 +313,6 @@ class Usuario implements UserInterface
     
         return $this;
     }
-
     /**
      * Get salt
      *
@@ -372,7 +322,6 @@ class Usuario implements UserInterface
     {
         return $this->salt;
     }
-
     /**
      * Add roles
      *
@@ -385,7 +334,6 @@ class Usuario implements UserInterface
     
         return $this;
     }
-
     /**
      * Remove roles
      *
@@ -395,7 +343,6 @@ class Usuario implements UserInterface
     {
         $this->roles->removeElement($roles);
     }
-
     /**
      * Get roles
      *
@@ -405,8 +352,44 @@ class Usuario implements UserInterface
     {
         return $this->roles->toArray();
     }
-
     public function setRoles($roles) {
         $this->user_roles = $roles;
     }
+
+public function serialize()
+{
+    return json_encode(
+            array($this->nombre,
+                $this->a_paterno,
+                $this->a_materno,
+                $this->email,
+                $this->contacto,
+                $this->rutaFoto,
+                $this->foto,
+                $this->grupo_ID,
+                $this->password,
+                $this->salt,
+                $this->roles,
+                $this->id));
+}
+
+/**
+ * Unserializes the given string in the current User object
+ * @param serialized
+ */
+public function unserialize($serialized)
+{
+    list($this->nombre,
+        $this->a_paterno,
+        $this->a_materno,
+        $this->email,
+        $this->contacto,
+        $this->rutaFoto,
+        $this->foto,
+        $this->grupo_ID,
+        $this->password,
+        $this->salt,
+        $this->roles,
+        $this->id) = json_decode($serialized);
+}  
 }

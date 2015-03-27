@@ -24,7 +24,6 @@ class AppKernel extends Kernel
             new Alzheimer\EventosBundle\EventosBundle(),
             new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
     	    new Avalanche\Bundle\ImagineBundle\AvalancheImagineBundle(),
-            new Yepsua\SmarTwigBundle\YepsuaSmarTwigBundle(),
 
             new Alzheimer\ImagenBundle\ImagenBundle(),
         );
