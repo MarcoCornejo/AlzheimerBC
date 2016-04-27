@@ -28,6 +28,11 @@ li a{
 	background-color:white
 }
 
+#map {
+	width: 500px;
+	height: 400px;
+}
+
 #banner img{
 	width:1000px;
 	height:400px;

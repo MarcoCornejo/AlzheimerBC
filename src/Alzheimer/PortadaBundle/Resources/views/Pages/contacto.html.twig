@@ -1,19 +1,50 @@
 {% extends '::frontend.html.twig' %}
 
+
 {% block body %}
 <div class="row">
-  <div class="medium-1 columns"><b>Direcci&oacute;n:</b></div>
-  <div class="medium-11 columns"><p>CASA DEL ABUELO.<br> Mision de san diego 3498. Hacienda Dorada</p></div> 
+  <div class="medium-1 columns"><b>Dirección:</b></div>
+  <div class="medium-11 columns"><p>CASA DEL ABUELO.<br> Mision de san diego #3498. Hacienda Dorada</p></div> 
 </div>
 
 <div class="row">
-  <div class="medium-1 columns"><b>Telefono:</b></div>
-  <div class="medium-11 columns"><p>552 48 46</p></div> 
+  <div class="medium-1 columns"><b>Teléfono:</b></div>
+  <div class="medium-11 columns"><p>552-48-46</p></div> 
 </div>
+
+<br>
+<style>
+      #map {
+        width: 800px;
+        height: 400px;
+      }
+    </style>
+
+<center>
+<div id="map"></div>
+    <script>
+      function initMap() {
+      	var myLatLng = {lat: 32.635867 , lng: -115.386862};
+        var mapDiv = document.getElementById('map');
+        var map = new google.maps.Map(mapDiv, {
+          center: myLatLng,
+          zoom: 17
+        });
+
+        var marker = new google.maps.Marker({
+        	position: myLatLng,
+        	map: map,
+        	title: 'Hello World!'
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
+        async defer></script>
+</center>
 
 
 </div>
 </div>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br>
 {% endblock %}
 
