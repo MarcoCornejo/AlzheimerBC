@@ -98,6 +98,7 @@ textarea {
   min-height: 170px; }
 
 select {
+  min-height: 48px;
   width: 100%; }
 
 .xy-center {

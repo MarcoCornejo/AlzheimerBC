@@ -19,7 +19,7 @@ class EventosType extends AbstractType
             ->add('descripcion')
             ->add('cuerpo', 'textarea')
             ->add('lugar', 'textarea')
-            ->add('fechaPub','date',array('widget' => 'single_text'))
+            ->add('fechaPub','date',array('widget' => 'single_text', 'format' => 'yyyy-MM-dd',))
             ->add('fechaFin','date',array('widget' => 'single_text'))
             ->add('fechaCrea','date',array('widget' => 'single_text'))
             ->add('imagenPrim','file',array('data_class' => null))

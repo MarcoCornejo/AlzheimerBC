@@ -6,9 +6,9 @@
 	<div class="large-7 columns">
     <h1>Creaci&oacute;n de Eventos</h1>
 		<fieldset>
+<p>Date: <input type="text" id="datepicker"></p>
             <legend>Eventos</legend>
             {{ form_start(form, { 'action': path('eventos_new'), 'method': 'POST', 'attr': {'enctype': 'multipart/form-data', 'class': 'forms forms-inline'} }) }} 
-
                 {{ form_label(form.titulo, 'Titulo') }}
                 {{ form_widget(form.titulo, { 'attr': {'class': 'width-100'} }) }}
                 {{ form_label(form.descripcion, 'Descripcion breve de la Noticia') }}

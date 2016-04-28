@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /web/bundles/
 /app/bootstrap.php.cache
 /app/cache/*
@@ -9,3 +10,9 @@
 /vendor/
 /bin/
 /composer.phar
+=======
+docs/_build
+node_modules/
+*-dist.zip
+bower_components/
+>>>>>>> fb7bf15b389104ccb38b4b89c6d40ca949d0232f
